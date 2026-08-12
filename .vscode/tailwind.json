@@ -1,0 +1,42 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@theme",
+      "description": "Use @theme to define your project's design tokens.",
+      "references": ["https://tailwindcss.com/docs/theme"]
+    },
+    {
+      "name": "@apply",
+      "description": "Use @apply to inline any existing utility classes into your own custom CSS.",
+      "references": ["https://tailwindcss.com/docs/functions-and-directives#apply"]
+    },
+    {
+      "name": "@source",
+      "description": "Use @source to explicitly specify source files.",
+      "references": [
+        "https://tailwindcss.com/docs/detecting-classes-in-source-files#using-a-custom-source-detection"
+      ]
+    },
+    {
+      "name": "@utility",
+      "description": "Use @utility to create custom utilities.",
+      "references": ["https://tailwindcss.com/docs/functions-and-directives#utility"]
+    },
+    {
+      "name": "@variant",
+      "description": "Use @variant to apply a variant.",
+      "references": ["https://tailwindcss.com/docs/functions-and-directives#variant"]
+    },
+    {
+      "name": "@custom-variant",
+      "description": "Use @custom-variant to define a custom variant.",
+      "references": ["https://tailwindcss.com/docs/functions-and-directives#custom-variant"]
+    },
+    {
+      "name": "@plugin",
+      "description": "Use @plugin to load a plugin.",
+      "references": ["https://tailwindcss.com/docs/functions-and-directives#plugin"]
+    }
+  ]
+}
