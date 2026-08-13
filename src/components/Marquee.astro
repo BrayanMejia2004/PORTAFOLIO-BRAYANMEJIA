@@ -1,37 +1,37 @@
 ---
 const words = [
 	"Design Thinking",
-	"Wireframe",
-	"Prototipos",
-	"Design System",
-	"UI/UX",
-	"Figma",
+	"WireFrame",
+	"Responsive Design",
+	"UX Research",
 ];
 
 const loop = [...words, ...words];
 ---
 
-<div class="mt-60 w-full overflow-hidden bg-electric py-10">
-	<div class="flex w-max animate-marquee items-center">
+<div
+	class="relative mt-62 z-10 flex w-full max-w-480 max-h-32.5 items-center justify-center gap-10 overflow-hidden bg-electric py-10 text-center text-h1 text-white"
+>
+	<div class="flex w-max animate-marquee items-center gap-10">
 		{
 			loop.map((word) => (
-				<div class="flex shrink-0 items-center gap-10 pr-10">
+				<div class="flex shrink-0 items-center gap-10">
 					<svg
-						width="50"
-						height="50"
+						width="30"
+						height="30"
 						viewBox="0 0 50 50"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
-						class="aspect-square shrink-0"
+						class="h-12.5 w-12.5 shrink-0"
 					>
 						<path
 							d="M17.125 17.1875L25 0L32.8125 17.1875L50 25L32.8125 32.875L25 50L17.125 32.875L0 25L17.125 17.1875Z"
-							fill="#60A5FA"
+							fill="white"
 						/>
 					</svg>
-					<span class="text-lg font-semibold whitespace-nowrap text-white">
+					<div class="relative whitespace-nowrap text-h3 leading-[120%]">
 						{word}
-					</span>
+					</div>
 				</div>
 			))
 		}
