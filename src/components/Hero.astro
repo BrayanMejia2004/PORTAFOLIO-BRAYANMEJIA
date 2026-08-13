@@ -1,6 +1,7 @@
 ---
 import { getTranslation, type Language } from "../i18n/dictionaries";
 import foto from "../assets/Foto.png";
+import cv from "../assets/Documentos/Hoja De Vida UXUI - Brayan Mejia.pdf";
 
 interface Props {
 	lang: Language;
@@ -106,7 +107,8 @@ const badges = [
 			{t("hero.verProyectos")}
 		</a>
 		<a
-			href="#"
+			href={cv}
+			download="Hoja De Vida UXUI - Brayan Mejia.pdf"
 			class="flex items-center gap-2.5 rounded-lg border-[0.5px] border-white bg-white/10 px-5 py-2.5 text-base font-medium text-white backdrop-blur-md transition-colors hover:bg-white/20"
 		>
 			<svg
