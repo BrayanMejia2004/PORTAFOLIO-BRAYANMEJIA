@@ -10,149 +10,146 @@ interface Props {
 const { lang } = Astro.props;
 const t = (key: Parameters<typeof getTranslation>[0]) =>
 	getTranslation(key, lang);
-
-const badges = [
-	{
-		label: t("hero.badge.uxUi"),
-		class: "absolute left-[-28px] top-[1px] bg-electric shadow-[0_4px_4px_0_rgba(148,163,184,0.25)]",
-	},
-	{
-		label: t("hero.badge.prototipos"),
-		class: "absolute right-[119.971px] bg-[#183F96]",
-	},
-	{
-		label: t("hero.badge.website"),
-		class: "absolute bottom-[58.821px] left-[24px] bg-[#183F96]",
-	},
-	{
-		label: t("hero.badge.designSystem"),
-		class: "absolute right-[32.971px] bottom-[59.829px] bg-[#183F96]",
-	},
-	{
-		label: t("hero.badge.figma"),
-		class: "absolute bottom-[-0.07px] left-[-28px] bg-[#183F96]",
-	},
-	{
-		label: t("hero.badge.mobileApp"),
-		class: "absolute bottom-[-0.214px] left-[134px] bg-electric shadow-[0_4px_4px_0_rgba(148,163,184,0.25)]",
-	},
-];
 ---
 
 <section
 	id="hero"
-	class="relative flex top-12.5 flex-col items-start justify-center gap-4 px-8 text-left"
+	class="relative isolate flex w-full max-w-[1840px] max-h-143.75 flex-col items-start justify-center gap-2.5 text-left text-[39px] text-white"
 >
-	<div class="flex items-center gap-6">
-		<p class="text-h2 font-semibold">{t("hero.hola")}</p>
-		<span
-			class="rounded-full border border-white/20 px-6 py-1 text-sm text-white"
-		>
-			{t("hero.disponible")}
-		</span>
-	</div>
-
-	<div>
-		<h1
-			class="text-display relative -ml-4 text-left leading-none font-semibold tracking-tight"
-		>
-			BRAYAN
-			<span class="absolute -bottom-12.5">MEJIA</span>
-		</h1>
-	</div>
-
-	<div>
-		<img
-			src={foto.src}
-			alt="Foto de Brayan Mejia"
-			class="absolute top-94.5 left-1/2 flex w-222.5 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center"
-		/>
-	</div>
-
-	<div>
-		<p class="max-w-xl text-lg text-white/80">{t("hero.tagline")}</p>
-	</div>
-
-	<div class="flex w-full items-center gap-4">
-		<a
-			href={`/${lang}/#proyectos`}
-			class="flex items-center gap-2.5 rounded-lg bg-electric py-2.5 pr-5 pl-7.5 text-base font-medium text-white transition-colors hover:bg-sky"
-		>
-			<svg
-				width="24"
-				height="24"
-				viewBox="0 0 24 24"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
+	<div
+		class="z-0 flex h-83 shrink-0 flex-col items-center justify-center self-stretch py-2.5 px-0 box-border"
+	>
+		<div class="flex w-[1768px] items-center gap-10 py-2.5 px-0 box-border">
+			<div class="flex items-center py-0 px-2.5">
+				<div class="relative font-semibold leading-[120%]">
+					{t("hero.hola")}
+				</div>
+			</div>
+			<div
+				class="flex items-center justify-center rounded-[20px] bg-transparent px-10 py-2.5 text-[16px]"
 			>
-				<path
-					d="M7 17V13L17 3L21 7L11 17H7Z"
-					stroke="white"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"></path>
-				<path
-					d="M3 21H21"
-					stroke="white"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"></path>
-				<path
-					d="M14 6L18 10"
-					stroke="white"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"></path>
-			</svg>
-			{t("hero.verProyectos")}
-		</a>
-		<a
-			href={cv}
-			download="Hoja De Vida UXUI - Brayan Mejia.pdf"
-			class="flex items-center gap-2.5 rounded-lg border-[0.5px] border-white bg-white/10 px-5 py-2.5 text-base font-medium text-white backdrop-blur-md transition-colors hover:bg-white/20"
+				<div class="relative leading-[120%] transform-[rotate(0.1deg)]">
+					{t("hero.disponible")}
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="relative isolate flex w-[1814px] flex-1 items-center gap-2.5 py-2.5 px-0 text-[250px] box-border"
 		>
-			<svg
-				width="24"
-				height="24"
-				viewBox="0 0 24 24"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
+			<div
+				class="absolute top-5 left-4 z-0 inline-block h-56.25 w-249.25 shrink-0 font-semibold leading-[90%]"
 			>
-				<path
-					d="M13.5 3L19 8.5V20C19 20.55 18.55 21 18 21H6C5.45 21 5 20.55 5 20V4C5 3.45 5.45 3 6 3H13.5Z"
-					stroke="white"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"></path>
-				<path
-					d="M14 3.5V8H18.5L14 3.5Z"
-					fill="white"
-					stroke="white"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"></path>
-				<path
-					d="M9 13H15"
-					stroke="white"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"></path>
-				<path
-					d="M9 17H12"
-					stroke="white"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"></path>
-			</svg>
-			{t("hero.descargarCV")}
-		</a>
+				BRAYAN
+			</div>
+			<div
+				class="absolute top-27 left-247.25 z-1 inline-block h-56.25 w-195.25 shrink-0 font-semibold leading-[90%]"
+			>
+				MEJIA
+			</div>
+		</div>
 	</div>
 
-	<div class="flex items-center gap-4">
+	<div
+		class="z-1 flex shrink-0 flex-col items-start justify-center self-stretch gap-5 py-2.5 px-11.25 text-[24px] box-border"
+	>
+		<div class="flex w-148.25 items-center p-2.5 box-border">
+			<div
+				class="relative inline-block w-109.75 shrink-0 font-light leading-[120%]"
+			>
+				{t("hero.tagline")}
+			</div>
+		</div>
+
+		<div class="flex items-center gap-5.25 py-2.5 px-0 text-lg">
+			<a
+				href={`/${lang}/#proyectos`}
+				class="flex w-54 items-center justify-center gap-2.5 rounded-2xl bg-electric py-2.5 pl-7.5 pr-5 box-border transition-colors hover:bg-sky"
+			>
+				<svg
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					class="relative h-6 w-6"
+				>
+					<path
+						d="M7 17V13L17 3L21 7L11 17H7Z"
+						stroke="white"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"></path>
+					<path
+						d="M3 21H21"
+						stroke="white"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"></path>
+					<path
+						d="M14 6L18 10"
+						stroke="white"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"></path>
+				</svg>
+				<div class="relative font-medium leading-[120%]">
+					{t("hero.verProyectos")}
+				</div>
+			</a>
+			<a
+				href={cv}
+				download="Hoja De Vida UXUI - Brayan Mejia.pdf"
+				class="flex items-center justify-center gap-2.5 rounded-2xl border-[0.5px] border-solid border-white bg-transparent py-2.5 pl-7.5 pr-5 transition-colors hover:bg-white/10"
+			>
+				<svg
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					class="relative h-6 w-6"
+				>
+					<path
+						d="M13.5 3L19 8.5V20C19 20.55 18.55 21 18 21H6C5.45 21 5 20.55 5 20V4C5 3.45 5.45 3 6 3H13.5Z"
+						stroke="white"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"></path>
+					<path
+						d="M14 3.5V8H18.5L14 3.5Z"
+						fill="white"
+						stroke="white"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"></path>
+					<path
+						d="M9 13H15"
+						stroke="white"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"></path>
+					<path
+						d="M9 17H12"
+						stroke="white"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"></path>
+				</svg>
+				<div class="relative font-medium leading-[120%]">
+					{t("hero.descargarCV")}
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div
+		class="z-2 flex shrink-0 items-center self-stretch gap-2.5 py-0 px-12.5"
+	>
 		<a
 			href="https://www.linkedin.com/in/brayan-yesid-mejia-ortega/"
 			aria-label="LinkedIn"
-			class="flex h-10 w-10 items-center justify-center"
+			class="relative h-10 w-10"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +166,7 @@ const badges = [
 		<a
 			href="https://www.instagram.com/brayanmejia_ux_ui/"
 			aria-label="Instagram"
-			class="flex h-10 w-10 items-center justify-center"
+			class="relative h-10 w-10"
 		>
 			<svg
 				width="40"
@@ -198,17 +195,71 @@ const badges = [
 	</div>
 
 	<div
-		class="pointer-events-none fixed right-20 bottom-26 z-20"
-		style="display: inline-grid; row-gap: 16px; column-gap: 6px; grid-template-rows: 44px 44px 44px; grid-template-columns: 238px 200px; grid-auto-flow: row;"
+		class="absolute z-3 top-[calc(50%+227.5px)] left-[calc(50%+381px)] grid shrink-0 grid-cols-[repeat(2,auto)] content-start gap-x-2.5 gap-y-4 pl-5 pr-5 text-base"
 	>
-		{
-			badges.map((badge) => (
-				<span
-					class={`absolute flex items-center justify-center rounded-[20px] px-10 py-2.5 text-sm font-medium text-white ${badge.class}`}
-				>
-					{badge.label}
-				</span>
-			))
-		}
+		<div
+			class="absolute w-max top-px -left-7 col-start-1 row-start-1 flex items-center justify-center rounded-[20px] bg-electric px-10 py-2.5 shadow-[0px_4px_4px_rgba(148,163,184,0.25)]"
+		>
+			<div
+				class="relative whitespace-nowrap font-medium leading-[120%] transform-[rotate(0.1deg)]"
+			>
+				{t("hero.badge.uxUi")}
+			</div>
+		</div>
+		<div
+			class="absolute w-max top-0 left-56.75 col-start-2 row-start-1 flex items-center justify-center rounded-[20px] bg-[#183f96] px-10 py-2.5"
+		>
+			<div
+				class="relative whitespace-nowrap font-medium leading-[120%] transform-[rotate(0.1deg)]"
+			>
+				{t("hero.badge.prototipos")}
+			</div>
+		</div>
+		<div
+			class="absolute w-max top-15.25 left-6 col-start-1 row-start-2 flex items-center justify-center rounded-[20px] bg-[#183f96] px-10 py-2.5"
+		>
+			<div
+				class="relative whitespace-nowrap font-medium leading-[120%] transform-[rotate(0.1deg)]"
+			>
+				{t("hero.badge.website")}
+			</div>
+		</div>
+		<div
+			class="absolute w-max top-15 left-68 col-start-2 row-start-2 flex items-center justify-center rounded-[20px] bg-[#183f96] px-10 py-2.5"
+		>
+			<div
+				class="relative whitespace-nowrap font-medium leading-[120%] transform-[rotate(0.1deg)]"
+			>
+				{t("hero.badge.designSystem")}
+			</div>
+		</div>
+		<div
+			class="absolute w-max top-30 -left-7 col-start-1 row-start-3 flex items-center justify-center rounded-[20px] bg-[#183f96] px-10 py-2.5"
+		>
+			<div
+				class="relative whitespace-nowrap font-medium leading-[120%] transform-[rotate(0.1deg)]"
+			>
+				{t("hero.badge.figma")}
+			</div>
+		</div>
+		<div
+			class="absolute w-max top-30 left-33.5 col-start-2 row-start-3 flex items-center justify-center rounded-[20px] bg-electric px-10 py-2.5 shadow-[0px_4px_4px_rgba(148,163,184,0.25)]"
+		>
+			<div
+				class="relative whitespace-nowrap font-medium leading-[120%] transform-[rotate(0.1deg)]"
+			>
+				{t("hero.badge.mobileApp")}
+			</div>
+		</div>
+	</div>
+
+	<div
+		class="absolute z-4 -bottom-66.75 left-[calc(50%-512px)] flex max-h-191.25 w-5xl max-w-5xl shrink-0 flex-col items-center justify-center p-2.5 box-border"
+	>
+		<img
+			src={foto.src}
+			alt="Foto de Brayan Mejia"
+			class="relative h-186.25 max-w-full shrink-0 self-stretch overflow-hidden object-cover"
+		/>
 	</div>
 </section>

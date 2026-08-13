@@ -18,6 +18,17 @@
 
 	--shadow-glow-primary: 0 0 24px 0 rgba(37, 99, 235, 0.35);
 
+	--animate-marquee: marquee 22s linear infinite;
+
+	@keyframes marquee {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
+
 	--text-display: 250px;
 	--text-display--line-height: 1;
 	--text-display--font-weight: 600;

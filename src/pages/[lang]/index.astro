@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Hero from "../../components/Hero.astro";
+import Marquee from "../../components/Marquee.astro";
 import fondo from "../../assets/Fondo1.png";
 import {
 	getTranslation,
@@ -27,7 +28,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 	<div class="relative">
 		<div
 			aria-hidden="true"
-			class="pointer-events-none absolute inset-x-0 top-0 z-0 h-227.5 w-full bg-cover bg-center"
+			class="pointer-events-none absolute inset-x-0 top-0 z-0 h-270 w-full bg-cover bg-center"
 			style={`background-image: url(${fondo.src})`}
 		>
 		</div>
@@ -38,5 +39,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 				<Hero lang={langKey} />
 			</main>
 		</div>
+
+		<Marquee />
 	</div>
 </Layout>
