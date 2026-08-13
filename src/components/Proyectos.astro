@@ -1,0 +1,100 @@
+---
+import {
+	getTranslation,
+	type Language,
+	type TranslationKey,
+} from "../i18n/dictionaries";
+import icono from "../assets/ICONOCIRCULO.png";
+import fondoCard from "../assets/FondoCard.png";
+import imagenBiblioteca from "../assets/ProyectosImagenes/ImagenBiblioteca.png";
+import imagenMascota from "../assets/ProyectosImagenes/ImagenMascota.png";
+import imagenYTX from "../assets/ProyectosImagenes/ImagenYTX150.png";
+
+interface Props {
+	lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = (key: TranslationKey) => getTranslation(key, lang);
+
+const images = [imagenBiblioteca, imagenMascota, imagenYTX];
+
+const projects = [1, 2, 3].map((n, i) => {
+	const key = (suffix: string) =>
+		`proyectos.${n}.${suffix}` as TranslationKey;
+	return {
+		title: t(key("titulo")),
+		description: t(key("descripcion")),
+		tags: t(key("tags")).split(","),
+		image: images[i],
+	};
+});
+---
+
+<section
+	id="proyectos"
+	class="relative isolate mx-auto flex h-270 w-full max-w-460 max-h-270 flex-col items-center justify-center gap-22.5 text-center text-hero-xl text-white"
+>
+	<div class="z-0 flex w-460 flex-col items-center justify-center gap-5">
+		<div class="relative self-stretch font-semibold leading-[120%]">
+			{t("proyectos.titulo")}
+		</div>
+		<div class="relative self-stretch text-lg font-medium leading-[120%]">
+			{t("proyectos.subtitulo")}
+		</div>
+	</div>
+
+	<div
+		class="z-1 flex w-460 items-center justify-center gap-7.5 text-left text-base"
+	>
+		{
+			projects.map((project) => (
+				<div
+					class="flex h-158 w-125.25 items-center justify-center rounded-xl bg-cover bg-center"
+					style={`background-image: url(${fondoCard.src})`}
+				>
+					<div class="relative isolate flex w-125.25 flex-col items-center gap-2.5">
+						<div class="relative z-0 h-76.75 self-stretch rounded-t-lg rounded-b-none" />
+
+						<img
+							src={project.image.src}
+							alt={project.title}
+							class="absolute z-1 top-12.5 left-[calc(50%-134.5px)] h-62.5 w-67.5 rounded-t-xl rounded-b-none object-cover"
+						/>
+
+						<div class="z-2 flex flex-col items-start gap-4 p-5">
+							<div class="flex h-11.75 w-72.75 items-center py-2.5 px-0 text-h1 box-border">
+								<div class="relative shrink-0 font-semibold leading-[120%]">
+									{project.title}
+								</div>
+							</div>
+							<div class="flex items-center justify-center py-2.5 px-0">
+								<div class="relative inline-block w-110.5 shrink-0 whitespace-pre-wrap leading-[120%]">
+									{project.description}
+								</div>
+							</div>
+							<div class="flex w-110.5 items-center justify-center gap-1.75">
+								{project.tags.map((tag) => (
+									<div class="flex items-center justify-center rounded-full bg-sky py-2.5 px-5">
+										<div class="relative leading-[120%]">
+											{tag}
+										</div>
+									</div>
+								))}
+							</div>
+						</div>
+
+						<a
+							href="#"
+							class="z-3 flex items-center justify-center rounded-lg border-[0.5px] border-solid border-white bg-transparent py-2.5 px-5 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] transition-colors hover:bg-white/10"
+						>
+							<div class="relative leading-[120%]">
+								{t("proyectos.verProyecto")}
+							</div>
+						</a>
+					</div>
+				</div>
+			))
+		}
+	</div>
+</section>

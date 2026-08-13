@@ -36,6 +36,18 @@ export const ui = {
 		'proyectos.titulo': 'Proyectos',
 		'proyectos.subtitulo': 'Una muestra de cómo abordo problemas reales de diseño',
 		'proyectos.verProyecto': 'Ver Proyecto',
+		'proyectos.1.titulo': 'Biblioteca Libre',
+		'proyectos.1.descripcion':
+			'Plataforma para democratizar el acceso a la lectura - proyecto de grado.',
+		'proyectos.1.tags': 'App Móvil,Educación,Proyecto académico',
+		'proyectos.2.titulo': 'App Wagly',
+		'proyectos.2.descripcion':
+			'App para que dueños de mascotas nunca olviden una vacuna.',
+		'proyectos.2.tags': 'App Web,Salud Animal,UX Research',
+		'proyectos.3.titulo': 'Yamaha XTZ150',
+		'proyectos.3.descripcion':
+			'Landing page enfocada en conversión para motociclistas.',
+		'proyectos.3.tags': 'Landing Page,E-commerce',
 
 		'sobreMi.titulo': 'Sobre Mi',
 		'sobreMi.parrafo':
@@ -112,6 +124,18 @@ export const ui = {
 		'proyectos.titulo': 'Projects',
 		'proyectos.subtitulo': 'A sample of how I approach real design problems',
 		'proyectos.verProyecto': 'View Project',
+		'proyectos.1.titulo': 'Biblioteca Libre',
+		'proyectos.1.descripcion':
+			'Platform to democratize access to reading - final year project.',
+		'proyectos.1.tags': 'Mobile App,Education,Academic project',
+		'proyectos.2.titulo': 'Wagly App',
+		'proyectos.2.descripcion':
+			'App so pet owners never forget a vaccine.',
+		'proyectos.2.tags': 'Web App,Animal Health,UX Research',
+		'proyectos.3.titulo': 'Yamaha XTZ150',
+		'proyectos.3.descripcion':
+			'Landing page focused on conversion for motorcyclists.',
+		'proyectos.3.tags': 'Landing Page,E-commerce',
 
 		'sobreMi.titulo': 'About Me',
 		'sobreMi.parrafo':

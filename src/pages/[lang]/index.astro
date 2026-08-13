@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Hero from "../../components/Hero.astro";
 import Marquee from "../../components/Marquee.astro";
+import Proyectos from "../../components/Proyectos.astro";
 import fondo from "../../assets/Fondo1.png";
 import {
 	getTranslation,
@@ -41,5 +42,6 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 		</div>
 
 		<Marquee />
+		<Proyectos lang={langKey} />
 	</div>
 </Layout>
