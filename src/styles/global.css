@@ -16,6 +16,8 @@
 	--radius-lg: 16px;
 	--radius-xl: 24px;
 
+	--shadow-glow-primary: 0 0 24px 0 rgba(37, 99, 235, 0.35);
+
 	--text-display: 250px;
 	--text-display--line-height: 1;
 	--text-display--font-weight: 600;
@@ -42,7 +44,7 @@
 	--text-lg--font-weight: 400;
 	--text-base: 16px;
 	--text-base--line-height: 1.5;
-	--text-base--font-weight: 400;
+	--text-base--font-weight: 400
 }
 
 @layer base {

@@ -1,0 +1,212 @@
+---
+import { getTranslation, type Language } from "../i18n/dictionaries";
+import foto from "../assets/Foto.png";
+
+interface Props {
+	lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = (key: Parameters<typeof getTranslation>[0]) =>
+	getTranslation(key, lang);
+
+const badges = [
+	{
+		label: t("hero.badge.uxUi"),
+		class: "absolute left-[-28px] top-[1px] bg-electric shadow-[0_4px_4px_0_rgba(148,163,184,0.25)]",
+	},
+	{
+		label: t("hero.badge.prototipos"),
+		class: "absolute right-[119.971px] bg-[#183F96]",
+	},
+	{
+		label: t("hero.badge.website"),
+		class: "absolute bottom-[58.821px] left-[24px] bg-[#183F96]",
+	},
+	{
+		label: t("hero.badge.designSystem"),
+		class: "absolute right-[32.971px] bottom-[59.829px] bg-[#183F96]",
+	},
+	{
+		label: t("hero.badge.figma"),
+		class: "absolute bottom-[-0.07px] left-[-28px] bg-[#183F96]",
+	},
+	{
+		label: t("hero.badge.mobileApp"),
+		class: "absolute bottom-[-0.214px] left-[134px] bg-electric shadow-[0_4px_4px_0_rgba(148,163,184,0.25)]",
+	},
+];
+---
+
+<section
+	id="hero"
+	class="relative flex top-12.5 flex-col items-start justify-center gap-4 px-8 text-left"
+>
+	<div class="flex items-center gap-6">
+		<p class="text-h2 font-semibold">{t("hero.hola")}</p>
+		<span
+			class="rounded-full border border-white/20 px-6 py-1 text-sm text-white"
+		>
+			{t("hero.disponible")}
+		</span>
+	</div>
+
+	<div>
+		<h1
+			class="text-display relative -ml-4 text-left leading-none font-semibold tracking-tight"
+		>
+			BRAYAN
+			<span class="absolute -bottom-12.5">MEJIA</span>
+		</h1>
+	</div>
+
+	<div>
+		<img
+			src={foto.src}
+			alt="Foto de Brayan Mejia"
+			class="absolute top-94.5 left-1/2 flex w-222.5 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center"
+		/>
+	</div>
+
+	<div>
+		<p class="max-w-xl text-lg text-white/80">{t("hero.tagline")}</p>
+	</div>
+
+	<div class="flex w-full items-center gap-4">
+		<a
+			href={`/${lang}/#proyectos`}
+			class="flex items-center gap-2.5 rounded-lg bg-electric py-2.5 pr-5 pl-7.5 text-base font-medium text-white transition-colors hover:bg-sky"
+		>
+			<svg
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M7 17V13L17 3L21 7L11 17H7Z"
+					stroke="white"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"></path>
+				<path
+					d="M3 21H21"
+					stroke="white"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"></path>
+				<path
+					d="M14 6L18 10"
+					stroke="white"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"></path>
+			</svg>
+			{t("hero.verProyectos")}
+		</a>
+		<a
+			href="#"
+			class="flex items-center gap-2.5 rounded-lg border-[0.5px] border-white bg-white/10 px-5 py-2.5 text-base font-medium text-white backdrop-blur-md transition-colors hover:bg-white/20"
+		>
+			<svg
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M13.5 3L19 8.5V20C19 20.55 18.55 21 18 21H6C5.45 21 5 20.55 5 20V4C5 3.45 5.45 3 6 3H13.5Z"
+					stroke="white"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"></path>
+				<path
+					d="M14 3.5V8H18.5L14 3.5Z"
+					fill="white"
+					stroke="white"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"></path>
+				<path
+					d="M9 13H15"
+					stroke="white"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"></path>
+				<path
+					d="M9 17H12"
+					stroke="white"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"></path>
+			</svg>
+			{t("hero.descargarCV")}
+		</a>
+	</div>
+
+	<div class="flex items-center gap-4">
+		<a
+			href="https://www.linkedin.com/in/brayan-yesid-mejia-ortega/"
+			aria-label="LinkedIn"
+			class="flex h-10 w-10 items-center justify-center"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="40"
+				height="40"
+				viewBox="0 0 40 40"
+				fill="none"
+			>
+				<path
+					d="M31.6667 5C32.5507 5 33.3986 5.35119 34.0237 5.97631C34.6488 6.60143 35 7.44928 35 8.33333V31.6667C35 32.5507 34.6488 33.3986 34.0237 34.0237C33.3986 34.6488 32.5507 35 31.6667 35H8.33333C7.44928 35 6.60143 34.6488 5.97631 34.0237C5.35119 33.3986 5 32.5507 5 31.6667V8.33333C5 7.44928 5.35119 6.60143 5.97631 5.97631C6.60143 5.35119 7.44928 5 8.33333 5H31.6667ZM30.8333 30.8333V22C30.8333 20.559 30.2609 19.177 29.2419 18.1581C28.223 17.1391 26.841 16.5667 25.4 16.5667C23.9833 16.5667 22.3333 17.4333 21.5333 18.7333V16.8833H16.8833V30.8333H21.5333V22.6167C21.5333 21.3333 22.5667 20.2833 23.85 20.2833C24.4688 20.2833 25.0623 20.5292 25.4999 20.9668C25.9375 21.4043 26.1833 21.9978 26.1833 22.6167V30.8333H30.8333ZM11.4667 14.2667C12.2093 14.2667 12.9215 13.9717 13.4466 13.4466C13.9717 12.9215 14.2667 12.2093 14.2667 11.4667C14.2667 9.91667 13.0167 8.65 11.4667 8.65C10.7196 8.65 10.0032 8.94675 9.47498 9.47498C8.94675 10.0032 8.65 10.7196 8.65 11.4667C8.65 13.0167 9.91667 14.2667 11.4667 14.2667ZM13.7833 30.8333V16.8833H9.16667V30.8333H13.7833Z"
+					fill="white"></path>
+			</svg>
+		</a>
+		<a
+			href="https://www.instagram.com/brayanmejia_ux_ui/"
+			aria-label="Instagram"
+			class="flex h-10 w-10 items-center justify-center"
+		>
+			<svg
+				width="40"
+				height="40"
+				viewBox="0 0 40 40"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M26.6667 5C31.2667 5 35 8.73333 35 13.3333V26.6667C35 31.2667 31.2667 35 26.6667 35H13.3333C8.73333 35 5 31.2667 5 26.6667V13.3333C5 8.73333 8.73333 5 13.3333 5H20H26.6667Z"
+					stroke="white"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"></path>
+				<path
+					d="M20.0002 13.3333C23.6835 13.3333 26.6668 16.3166 26.6668 20C26.6668 23.6833 23.6835 26.6666 20.0002 26.6666C16.3168 26.6666 13.3335 23.6833 13.3335 20C13.3335 16.3166 16.3168 13.3333 20.0002 13.3333Z"
+					stroke="white"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"></path>
+				<path
+					d="M28.3335 14.1667C29.7142 14.1667 30.8335 13.0474 30.8335 11.6667C30.8335 10.286 29.7142 9.16669 28.3335 9.16669C26.9528 9.16669 25.8335 10.286 25.8335 11.6667C25.8335 13.0474 26.9528 14.1667 28.3335 14.1667Z"
+					fill="white"></path>
+			</svg>
+		</a>
+	</div>
+
+	<div
+		class="pointer-events-none fixed right-20 bottom-26 z-20"
+		style="display: inline-grid; row-gap: 16px; column-gap: 6px; grid-template-rows: 44px 44px 44px; grid-template-columns: 238px 200px; grid-auto-flow: row;"
+	>
+		{
+			badges.map((badge) => (
+				<span
+					class={`absolute flex items-center justify-center rounded-[20px] px-10 py-2.5 text-sm font-medium text-white ${badge.class}`}
+				>
+					{badge.label}
+				</span>
+			))
+		}
+	</div>
+</section>
