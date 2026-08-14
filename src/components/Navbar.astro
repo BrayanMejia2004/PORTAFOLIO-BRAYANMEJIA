@@ -1,6 +1,7 @@
 ---
 import { getTranslation, type Language } from "../i18n/dictionaries";
 import logo from "../assets/ICONOCIRCULO.png";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
 
 interface Props {
 	lang: Language;
@@ -67,5 +68,7 @@ const links = [
 					fill="black"></path>
 			</svg>
 		</a>
+
+		<LanguageSwitcher lang={lang} />
 	</div>
 </header>

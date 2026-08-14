@@ -185,7 +185,7 @@ export const ui = {
 			'High-fidelity wireframes, interactive prototypes, applying a consistent design system.',
 		'proceso.step4.titulo': 'Validate',
 		'proceso.step4.descripcion':
-			'I test the design, receive feedback and iterate — the design is never the first version.',
+			'I test the design, receive feedback and iterate the design is never the first version.',
 
 		'contacto.titulo': 'Shall we work together?',
 		'contacto.subtitulo':
