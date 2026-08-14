@@ -1,0 +1,143 @@
+---
+import {
+	getTranslation,
+	type Language,
+	type TranslationKey,
+} from "../i18n/dictionaries";
+import fondo from "../assets/Fondo3.png";
+
+interface Props {
+	lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = (key: TranslationKey) => getTranslation(key, lang);
+---
+
+<section
+	id="contacto"
+	class="relative isolate flex h-270 w-full max-h-270 shrink-0 flex-col items-center justify-center gap-12.5 box-border bg-cover bg-center text-left text-hero-xl text-white"
+	style={`background-image: url(${fondo.src})`}
+>
+	<div class="z-0 flex flex-col items-start self-stretch">
+		<div
+			class="flex h-27.75 items-center justify-center self-stretch p-2.5 box-border"
+		>
+			<div class="relative leading-[120%]">
+				{t("contacto.titulo")}
+			</div>
+		</div>
+		<div
+			class="relative -mt-2.5 flex h-9.75 items-center justify-center self-stretch p-2.5 box-border text-base"
+		>
+			<div class="relative leading-[120%]">
+				{t("contacto.subtitulo")}
+			</div>
+		</div>
+	</div>
+
+	<form
+		class="z-1 grid shrink-0 grid-cols-[repeat(2,340px)] content-start gap-x-5 gap-y-2.5 p-5 text-base box-border"
+	>
+		<div
+			class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-1 row-1"
+		>
+			<label class="flex items-center justify-center font-bold">
+				<span class="relative leading-[120%]">
+					{t("contacto.campoNombre")}
+				</span>
+			</label>
+			<input
+				type="text"
+				required
+				placeholder={t("contacto.placeholderNombre")}
+				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none"
+			/>
+		</div>
+		<div
+			class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-2 row-1"
+		>
+			<label class="flex items-center justify-center font-bold">
+				<span class="relative leading-[120%]">
+					{t("contacto.campoCorreo")}
+				</span>
+			</label>
+			<input
+				type="email"
+				required
+				placeholder={t("contacto.placeholderCorreo")}
+				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none"
+			/>
+		</div>
+		<div
+			class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-1 row-2"
+		>
+			<label class="flex items-center justify-center font-bold">
+				<span class="relative leading-[120%]">
+					{t("contacto.campoCelular")}
+				</span>
+			</label>
+			<input
+				type="tel"
+				required
+				data-contacto-telefono
+				inputmode="numeric"
+				pattern="[0-9]*"
+				placeholder={t("contacto.placeholderCelular")}
+				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none"
+			/>
+		</div>
+		<div
+			class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-2 row-2"
+		>
+			<label class="flex items-center justify-center font-bold">
+				<span class="relative leading-[120%]">
+					{t("contacto.campoCiudad")}
+				</span>
+			</label>
+			<input
+				type="text"
+				required
+				placeholder={t("contacto.placeholderCiudad")}
+				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none"
+			/>
+		</div>
+		<div
+			class="flex h-39.75 flex-col items-start gap-2.5 px-5 py-2.5 col-[1/span_2] row-[3/span_2]"
+		>
+			<label class="flex items-center justify-center font-bold">
+				<span class="relative leading-[120%]">
+					{t("contacto.campoMensaje")}
+				</span>
+			</label>
+			<textarea
+				required
+				placeholder={t("contacto.placeholderMensaje")}
+				class="h-27.5 max-h-27.5 box-border flex items-center justify-center self-stretch rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none resize-none"
+			></textarea>
+		</div>
+		<div
+			class="flex w-max flex-col items-start px-5 py-2.5 box-border col-1 row-5"
+		>
+			<button
+				type="submit"
+				class="flex shrink-0 items-center rounded-lg border-[0.5px] border-solid border-white bg-transparent px-5 py-2.5 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] transition-colors hover:bg-white/10"
+			>
+				<b class="relative text-base font-bold leading-[120%]">
+					{t("contacto.enviar")}
+				</b>
+			</button>
+		</div>
+	</form>
+</section>
+
+<script>
+	const input = document.querySelector<HTMLInputElement>(
+		"[data-contacto-telefono]",
+	);
+	input?.addEventListener("keydown", (event) => {
+		if (["e", "E", "+", "-", "."].includes(event.key)) {
+			event.preventDefault();
+		}
+	});
+</script>

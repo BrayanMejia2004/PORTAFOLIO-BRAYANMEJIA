@@ -6,6 +6,8 @@ import Marquee from "../../components/Marquee.astro";
 import Proyectos from "../../components/Proyectos.astro";
 import SobreMi from "../../components/SobreMi.astro";
 import Proceso from "../../components/Proceso.astro";
+import Contacto from "../../components/Contacto.astro";
+import Footer from "../../components/Footer.astro";
 import fondo from "../../assets/Fondo1.png";
 import {
 	getTranslation,
@@ -47,5 +49,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 		<Proyectos lang={langKey} />
 		<SobreMi lang={langKey} />
 		<Proceso lang={langKey} />
+		<Contacto lang={langKey} />
+		<Footer lang={langKey} />
 	</div>
 </Layout>

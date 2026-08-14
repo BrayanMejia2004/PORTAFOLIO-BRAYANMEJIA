@@ -95,6 +95,7 @@ export const ui = {
 		'contacto.enviar': 'Enviar Mensaje',
 
 		'footer.tagline': '“ Diseño de experiencias digitales con precisión, claridad y empatía. ”',
+		'footer.contactame': 'CONTÁCTAME',
 		'footer.navegacion': 'Navegación',
 		'footer.inicio': 'Inicio',
 		'footer.proyectos': 'Proyectos',
@@ -192,6 +193,7 @@ export const ui = {
 		'contacto.enviar': 'Send Message',
 
 		'footer.tagline': '“ I design digital experiences with precision, clarity, and empathy. ”',
+		'footer.contactame': 'CONTACT ME',
 		'footer.navegacion': 'Navigation',
 		'footer.inicio': 'Home',
 		'footer.proyectos': 'Projects',
