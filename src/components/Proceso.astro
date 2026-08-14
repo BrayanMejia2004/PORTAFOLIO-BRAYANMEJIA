@@ -1,0 +1,75 @@
+---
+import {
+	getTranslation,
+	type Language,
+	type TranslationKey,
+} from "../i18n/dictionaries";
+import fondoCard from "../assets/FondoCardProceso.png";
+import linea from "../assets/LineProceso.png";
+
+interface Props {
+	lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = (key: TranslationKey) => getTranslation(key, lang);
+
+const steps = [1, 2, 3, 4].map((n) => {
+	const key = (suffix: string) =>
+		`proceso.step${n}.${suffix}` as TranslationKey;
+	return {
+		titulo: t(key("titulo")),
+		descripcion: t(key("descripcion")),
+	};
+});
+---
+
+<section
+	id="proceso"
+	class="relative isolate mx-auto flex h-270 w-full max-w-460 max-h-270 shrink-0 flex-col items-center justify-center gap-24.75 p-5 box-border text-center text-hero-xl text-white"
+>
+	<div
+		class="relative isolate z-0 flex w-234 flex-col items-center justify-center gap-2.5 shrink-0"
+	>
+		<div
+			class="relative self-stretch [text-shadow:0px_0px_24px_rgba(37,99,235,0.35)]"
+		>
+			{t("proceso.titulo")}
+		</div>
+		<img
+			src={linea.src}
+			alt=""
+			aria-hidden="true"
+			class="absolute top-22.75 left-19.25 z-1 h-[20.5px] w-[781.5px] shrink-0"
+		/>
+	</div>
+
+	<div
+		class="z-1 grid shrink-0 grid-cols-[repeat(2,500px)] justify-items-center [align-content:start] gap-7.5 p-5 text-h1 box-border"
+	>
+		{
+			steps.map((step) => (
+				<div class="relative isolate flex h-70 w-125 max-w-125 items-center justify-center gap-2.5 rounded-2xl bg-obsidian p-2.5 shadow-glow-primary box-border overflow-hidden">
+					<img
+						src={fondoCard.src}
+						alt=""
+						aria-hidden="true"
+						class="absolute top-29.75 -left-34 z-0 h-62 w-159 shrink-0 filter-[blur(50px)]"
+					/>
+					<div class="relative z-1 flex h-58.5 shrink-0 flex-1 flex-col items-center justify-center gap-4 self-stretch p-2.5">
+						<div class="flex items-center justify-center py-0 px-10">
+							<div class="relative leading-[120%]">
+								{step.titulo}
+							</div>
+						</div>
+						<div class="flex flex-col items-center justify-center self-stretch py-0 px-10 text-base">
+							<div class="relative self-stretch leading-[120%]">
+								{step.descripcion}
+							</div>
+						</div>
+					</div>
+				</div>
+			))
+		}
+	</div>
+</section>
