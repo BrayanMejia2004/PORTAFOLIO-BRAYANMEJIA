@@ -36,6 +36,7 @@ export const ui = {
 		'proyectos.titulo': 'Proyectos',
 		'proyectos.subtitulo': 'Una muestra de cómo abordo problemas reales de diseño',
 		'proyectos.verProyecto': 'Ver Proyecto',
+		'proyectos.prototipo': 'Ver Prototipo',
 		'proyectos.1.titulo': 'Biblioteca Libre',
 		'proyectos.1.descripcion':
 			'Plataforma para democratizar el acceso a la lectura - proyecto de grado.',
@@ -119,7 +120,7 @@ export const ui = {
 		'nav.proyectos': 'Projects',
 		'nav.sobreMi': 'About Me',
 		'nav.proceso': 'Process',
-		'nav.contactame': 'CONTACT ME',
+		'nav.contactame': 'Contact Me',
 		'nav.lang': 'Change language',
 
 		'hero.hola': "Hello, I'm",
@@ -139,6 +140,7 @@ export const ui = {
 		'proyectos.titulo': 'Projects',
 		'proyectos.subtitulo': 'A sample of how I approach real design problems',
 		'proyectos.verProyecto': 'View Project',
+		'proyectos.prototipo': 'View Prototype',
 		'proyectos.1.titulo': 'Biblioteca Libre',
 		'proyectos.1.descripcion':
 			'Platform to democratize access to reading - final year project.',
@@ -203,7 +205,7 @@ export const ui = {
 		'contacto.enviar': 'Send Message',
 
 		'footer.tagline': '“ I design digital experiences with precision, clarity, and empathy. ”',
-		'footer.contactame': 'CONTACT ME',
+		'footer.contactame': 'Contact Me',
 		'footer.navegacion': 'Navigation',
 		'footer.inicio': 'Home',
 		'footer.proyectos': 'Projects',

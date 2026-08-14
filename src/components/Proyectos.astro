@@ -26,6 +26,13 @@ const links = [
 	"https://www.figma.com/design/adddViPMojOi0Ll85wsfLC/PROYECTOS?node-id=0-1&t=D0AUo1UIsQUhWRl8-1",
 ];
 
+const protoLinks = [
+	"https://www.figma.com/proto/adddViPMojOi0Ll85wsfLC/PROYECTOS?node-id=1-341&t=bmzQd0GStatwIZ9I-1",
+	"https://www.figma.com/proto/adddViPMojOi0Ll85wsfLC/PROYECTOS?node-id=1-2515&t=bmzQd0GStatwIZ9I-1",
+	"https://www.figma.com/proto/adddViPMojOi0Ll85wsfLC/PROYECTOS?node-id=1-6227&t=bmzQd0GStatwIZ9I-1",
+	"https://www.figma.com/proto/adddViPMojOi0Ll85wsfLC/PROYECTOS?node-id=0-1&t=bmzQd0GStatwIZ9I-1",
+];
+
 const projects = [1, 2, 3, 4].map((n, i) => {
 	const key = (suffix: string) =>
 		`proyectos.${n}.${suffix}` as TranslationKey;
@@ -35,6 +42,7 @@ const projects = [1, 2, 3, 4].map((n, i) => {
 		tags: t(key("tags")).split(","),
 		image: images[i],
 		link: links[i],
+		protoLink: protoLinks[i],
 	};
 });
 ---
@@ -93,16 +101,28 @@ const projects = [1, 2, 3, 4].map((n, i) => {
 							</div>
 						</div>
 
-						<a
-							href={project.link}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="z-3 flex items-center justify-center rounded-lg border-[0.5px] border-solid border-white bg-transparent py-2.5 px-5 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] transition-colors hover:bg-white/10"
-						>
-							<div class="relative leading-[120%]">
-								{t("proyectos.verProyecto")}
-							</div>
-						</a>
+						<div class="z-3 flex items-center justify-center gap-2.5">
+							<a
+								href={project.link}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="flex items-center justify-center rounded-lg border-[0.5px] border-solid border-white bg-transparent py-2.5 px-5 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] transition-colors hover:bg-white/10"
+							>
+								<div class="relative leading-[120%]">
+									{t("proyectos.verProyecto")}
+								</div>
+							</a>
+							<a
+								href={project.protoLink}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="flex items-center justify-center rounded-lg border-[0.5px] border-solid border-white bg-transparent py-2.5 px-5 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] transition-colors hover:bg-white/10"
+							>
+								<div class="relative leading-[120%]">
+									{t("proyectos.prototipo")}
+								</div>
+							</a>
+						</div>
 					</div>
 				</div>
 			))
