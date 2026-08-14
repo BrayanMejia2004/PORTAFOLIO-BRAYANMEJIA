@@ -49,6 +49,11 @@ export const ui = {
 			'Landing page enfocada en conversión para motociclistas.',
 		'proyectos.3.tags': 'Landing Page,E-commerce',
 
+		'proyectos.4.titulo': 'Intercom Pro',
+		'proyectos.4.descripcion':
+			'Landing page para vender intercomunicadores bluetooth para cascos de moto, enfocada en conversión.',
+		'proyectos.4.tags': 'Landing Page,Tecnología',
+
 		'sobreMi.titulo': 'Sobre Mi',
 		'sobreMi.parrafo':
 			'Mi camino comenzó en las Unidades Tecnológicas de Santander, cursando la carrera de Tecnología en Desarrollo de Sistemas Informáticos, continuando con la Ingeniería en Sistemas. Fue en ese camino donde conocí el diseño UX/UI, y desde entonces es lo que más me apasiona hacer. Hoy sigo formándome por mi cuenta, cada vez con más práctica y experiencia.',
@@ -146,6 +151,11 @@ export const ui = {
 		'proyectos.3.descripcion':
 			'Landing page focused on conversion for motorcyclists.',
 		'proyectos.3.tags': 'Landing Page,E-commerce',
+
+		'proyectos.4.titulo': 'Intercom Pro',
+		'proyectos.4.descripcion':
+			'Landing page to sell bluetooth helmet intercoms for motorcycles, focused on conversion.',
+		'proyectos.4.tags': 'Landing Page,Technology',
 
 		'sobreMi.titulo': 'About Me',
 		'sobreMi.parrafo':

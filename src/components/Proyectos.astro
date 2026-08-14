@@ -8,6 +8,7 @@ import fondoCard from "../assets/FondoCard.png";
 import imagenBiblioteca from "../assets/ProyectosImagenes/ImagenBiblioteca.png";
 import imagenMascota from "../assets/ProyectosImagenes/ImagenMascota.png";
 import imagenYTX from "../assets/ProyectosImagenes/ImagenYTX150.png";
+import imagenIntercom from "../assets/ProyectosImagenes/ImagenIntercomPro.png";
 
 interface Props {
 	lang: Language;
@@ -16,9 +17,16 @@ interface Props {
 const { lang } = Astro.props;
 const t = (key: TranslationKey) => getTranslation(key, lang);
 
-const images = [imagenBiblioteca, imagenMascota, imagenYTX];
+const images = [imagenBiblioteca, imagenMascota, imagenYTX, imagenIntercom];
 
-const projects = [1, 2, 3].map((n, i) => {
+const links = [
+	"https://www.figma.com/design/adddViPMojOi0Ll85wsfLC/PROYECTOS?node-id=1-341&t=ZEvTjnwbKJOXqUi8-1",
+	"https://www.figma.com/design/adddViPMojOi0Ll85wsfLC/PROYECTOS?node-id=1-2515&t=ZEvTjnwbKJOXqUi8-1",
+	"https://www.figma.com/design/adddViPMojOi0Ll85wsfLC/PROYECTOS?node-id=1-6227&t=ZEvTjnwbKJOXqUi8-1",
+	"https://www.figma.com/design/adddViPMojOi0Ll85wsfLC/PROYECTOS?node-id=0-1&t=D0AUo1UIsQUhWRl8-1",
+];
+
+const projects = [1, 2, 3, 4].map((n, i) => {
 	const key = (suffix: string) =>
 		`proyectos.${n}.${suffix}` as TranslationKey;
 	return {
@@ -26,6 +34,7 @@ const projects = [1, 2, 3].map((n, i) => {
 		description: t(key("descripcion")),
 		tags: t(key("tags")).split(","),
 		image: images[i],
+		link: links[i],
 	};
 });
 ---
@@ -44,12 +53,13 @@ const projects = [1, 2, 3].map((n, i) => {
 	</div>
 
 	<div
-		class="z-1 flex w-460 items-center justify-center gap-7.5 text-left text-base"
+		data-proyectos-scroll
+		class="z-1 flex w-full cursor-grab gap-7.5 overflow-x-auto px-2.5 py-5 text-left text-base select-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden active:cursor-grabbing"
 	>
 		{
 			projects.map((project) => (
 				<div
-					class="flex h-158 w-125.25 items-center justify-center rounded-xl bg-cover bg-center"
+					class="flex h-158 w-125.25 shrink-0 items-center justify-center rounded-xl bg-cover bg-center"
 					style={`background-image: url(${fondoCard.src})`}
 				>
 					<div class="relative isolate flex w-125.25 flex-col items-center gap-2.5">
@@ -58,7 +68,7 @@ const projects = [1, 2, 3].map((n, i) => {
 						<img
 							src={project.image.src}
 							alt={project.title}
-							class="absolute z-1 top-12.5 left-[calc(50%-134.5px)] h-62.5 w-67.5 rounded-t-xl rounded-b-none object-cover"
+							class="absolute z-1 top-12.5 left-[calc(50%-134.5px)] h-62.5 w-67.5 rounded-t-xl rounded-b-none object-contain"
 						/>
 
 						<div class="z-2 flex flex-col items-start gap-4 p-5">
@@ -84,7 +94,9 @@ const projects = [1, 2, 3].map((n, i) => {
 						</div>
 
 						<a
-							href="#"
+							href={project.link}
+							target="_blank"
+							rel="noopener noreferrer"
 							class="z-3 flex items-center justify-center rounded-lg border-[0.5px] border-solid border-white bg-transparent py-2.5 px-5 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] transition-colors hover:bg-white/10"
 						>
 							<div class="relative leading-[120%]">
@@ -97,3 +109,42 @@ const projects = [1, 2, 3].map((n, i) => {
 		}
 	</div>
 </section>
+
+<script>
+	const scroller = document.querySelector<HTMLElement>(
+		"[data-proyectos-scroll]",
+	);
+
+	if (scroller) {
+		let isDown = false;
+		let startX = 0;
+		let scrollLeft = 0;
+
+		scroller.addEventListener("mousedown", (e) => {
+			isDown = true;
+			startX = e.pageX - scroller.offsetLeft;
+			scrollLeft = scroller.scrollLeft;
+		});
+
+		scroller.addEventListener("mouseleave", () => {
+			isDown = false;
+		});
+
+		scroller.addEventListener("mouseup", () => {
+			isDown = false;
+		});
+
+		scroller.addEventListener("mousemove", (e) => {
+			if (!isDown) return;
+			e.preventDefault();
+			const x = e.pageX - scroller.offsetLeft;
+			const walk = (x - startX) * 1.5;
+			scroller.scrollLeft = scrollLeft - walk;
+		});
+
+		scroller.addEventListener(
+			"dragstart",
+			(e) => e.preventDefault(),
+		);
+	}
+</script>
