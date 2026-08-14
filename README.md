@@ -1,46 +1,41 @@
-# Astro Starter Kit: Basics
+# Portafolio — Brayan Mejía (UX/UI Designer)
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Español
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Bienvenido a mi portafolio digital, un espacio donde el diseño UX/UI cobra vida. Construido con **Astro**, este sitio es completamente bilingüe (**ES/EN**) e invita a explorar mi trabajo a través de una experiencia visual inmersiva: 4 proyectos de diseño reales (Biblioteca, Wagly, Landing Yamaha e Intercom Pro), un recorrido por mi proceso de diseño, un formulario de contacto listo para conversar y un conmutador de idioma integrado para cambiar entre español e inglés en un clic.
 
-## 🚀 Project Structure
+## English
 
-Inside of your Astro project, you'll see the following folders and files:
+Welcome to my digital portfolio, a space where UX/UI design comes to life. Built with **Astro**, this site is fully bilingual (**ES/EN**) and invites you to explore my work through an immersive visual experience: 4 real design projects (Biblioteca, Wagly, Yamaha Landing and Intercom Pro), a walkthrough of my design process, a contact form ready to talk and a built-in language switcher to toggle between Spanish and English in one click.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+---
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Tecnologías / Technologies
 
-## 🧞 Commands
+### Español
 
-All commands are run from the root of the project, from a terminal:
+- ⚡ **Astro 7** — Estructura ultrarrápida con páginas dinámicas.
+- 🎨 **Tailwind CSS v4** — Estilos modernos y consistentes.
+- 🛡️ **TypeScript** — Código seguro y mantenible.
+- 🌍 **i18n** — Rutas dinámicas `/[lang]/` con soporte es/en.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### English
 
-## 👀 Want to learn more?
+- ⚡ **Astro 7** — Blazing-fast structure with dynamic pages.
+- 🎨 **Tailwind CSS v4** — Modern, consistent styling.
+- 🛡️ **TypeScript** — Safe and maintainable code.
+- 🌍 **i18n** — Dynamic `/[lang]/` routes with es/en support.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## Vistas / Mockups
+
+Diseño responsive pensado para cada pantalla, del desktop al iPhone.
+
+| Desktop | Laptop |
+| :---: | :---: |
+| ![Desktop](src/assets/Mokups/MockupDesktop.png) | ![Laptop](src/assets/Mokups/MockupLaptop.png) |
+
+| Tablet | iPhone |
+| :---: | :---: |
+| ![Tablet](src/assets/Mokups/MockupTablet.png) | ![iPhone](src/assets/Mokups/MockupIphone.png) |
