@@ -51,10 +51,19 @@ export const ui = {
 
 		'sobreMi.titulo': 'Sobre Mi',
 		'sobreMi.parrafo':
-			'Mi camino comenzó en las Unidades Tecnológicas de Santander, cursando la carrera de Tecnología en Desarrollo de Sistemas Informáticos, y continué con la Ingeniería en Sistemas. Fue en ese camino donde conocí el diseño UX/UI, y desde entonces es lo que más me apasiona hacer. Hoy sigo formándome por mi cuenta, cada vez con más práctica y experiencia.',
+			'Mi camino comenzó en las Unidades Tecnológicas de Santander, cursando la carrera de Tecnología en Desarrollo de Sistemas Informáticos, continuando con la Ingeniería en Sistemas. Fue en ese camino donde conocí el diseño UX/UI, y desde entonces es lo que más me apasiona hacer. Hoy sigo formándome por mi cuenta, cada vez con más práctica y experiencia.',
 		'sobreMi.cita':
 			'“ Creo en investigar antes de diseñar, en simplificar sin perder personalidad, y en que cada pantalla debe resolver un problema real, no solo verse bien. ”',
 		'sobreMi.cta': '¿Trabajamos Juntos?',
+		'sobreMi.educacion': 'Mi Educación',
+		'sobreMi.ed1.titulo': 'Ingeniería en Sistemas',
+		'sobreMi.ed1.institucion': 'Unidades Tecnológicas de Santander (2024 - 2026)',
+		'sobreMi.ed2.titulo': 'Tecnólogo en Desarrollo de Sistemas Informáticos',
+		'sobreMi.ed2.institucion': 'Unidades Tecnológicas de Santander (2021 - 2024)',
+		'sobreMi.ed3.titulo': 'Técnico en Sistemas',
+		'sobreMi.ed3.institucion': 'Servicio Nacional de Aprendizaje SENA (2019 - 2020)',
+		'sobreMi.ed4.titulo': 'Bachiller Técnico con Especialidad en Sistemas',
+		'sobreMi.ed4.institucion': 'Colegio Técnico Industrial José Elías Puyana (2015-2020)',
 
 		'proceso.titulo': 'Proceso de Diseño',
 		'proceso.step1.titulo': 'Investigar',
@@ -139,10 +148,19 @@ export const ui = {
 
 		'sobreMi.titulo': 'About Me',
 		'sobreMi.parrafo':
-			'My journey began at the Unidades Tecnológicas de Santander, studying Systems Development Technology, and continued with Systems Engineering. Along the way I discovered UX/UI design, and since then it is what I am most passionate about. Today I keep learning on my own, gaining more practice and experience every day.',
+			'My journey began at the Unidades Tecnológicas de Santander, studying Systems Development Technology, continued with Systems Engineering. Along the way I discovered UX/UI design, and since then it is what I am most passionate about. Today I keep learning on my own, gaining more practice and experience every day.',
 		'sobreMi.cita':
 			'“ I believe in researching before designing, in simplifying without losing personality, and that every screen should solve a real problem, not just look good. ”',
 		'sobreMi.cta': 'Shall we work together?',
+		'sobreMi.educacion': 'My Education',
+		'sobreMi.ed1.titulo': 'Systems Engineering',
+		'sobreMi.ed1.institucion': 'Unidades Tecnológicas de Santander (2024 - 2026)',
+		'sobreMi.ed2.titulo': 'Technologist in Systems Development',
+		'sobreMi.ed2.institucion': 'Unidades Tecnológicas de Santander (2021 - 2024)',
+		'sobreMi.ed3.titulo': 'Systems Technician',
+		'sobreMi.ed3.institucion': 'Servicio Nacional de Aprendizaje SENA (2019 - 2020)',
+		'sobreMi.ed4.titulo': 'Technical High School Degree in Systems',
+		'sobreMi.ed4.institucion': 'Colegio Técnico Industrial José Elías Puyana (2015-2020)',
 
 		'proceso.titulo': 'Design Process',
 		'proceso.step1.titulo': 'Research',
