@@ -1,0 +1,204 @@
+---
+import {
+	getTranslation,
+	type Language,
+	type TranslationKey,
+} from "../i18n/dictionaries";
+import foto2 from "../assets/Foto2.png";
+import fondo2 from "../assets/Fondo2.png";
+
+interface Props {
+	lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = (key: TranslationKey) => getTranslation(key, lang);
+
+const education = [1, 2, 3, 4].map((n) => {
+	const key = (suffix: string) =>
+		`sobreMi.ed${n}.${suffix}` as TranslationKey;
+	return {
+		titulo: t(key("titulo")),
+		institucion: t(key("institucion")),
+	};
+});
+---
+
+<section
+	id="sobreMi"
+	data-sobre-mi
+	class="relative isolate flex h-270 w-full max-h-270 shrink-0 items-center overflow-hidden bg-cover bg-center text-center text-[300px] text-white box-border"
+	style={`background-image: url(${fondo2.src})`}
+>
+	<div class="absolute top-47.5 h-200 w-200 shrink-0">
+		<img
+			src={foto2.src}
+			alt="Foto de Brayan Mejia"
+			class="absolute top-11 left-20 object-cover"
+		/>
+	</div>
+
+	<div
+		class="z-1 mx-auto flex w-full max-w-460 items-center justify-end gap-12.5 px-25 py-0"
+	>
+		<div
+			class="flex shrink-0 flex-col items-center justify-center gap-12.5 p-2.5 text-hero-xl"
+		>
+			<div class="flex items-center justify-center gap-12.5">
+				<button
+					type="button"
+					aria-label="Anterior"
+					data-sobre-arrow="prev"
+					class="cursor-pointer text-white transition-opacity hover:opacity-70"
+				>
+					<svg
+						width="48"
+						height="48"
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M15 18L9 12L15 6"
+							stroke="white"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"></path>
+					</svg>
+				</button>
+				<h2
+					data-sobre-title="about"
+					class="animate-fade-in text-hero-md leading-[120%] underline underline-offset-8"
+				>
+					{t("sobreMi.titulo")}
+				</h2>
+				<h2
+					data-sobre-title="educacion"
+					class="hidden text-hero-md leading-[120%] underline underline-offset-8"
+				>
+					{t("sobreMi.educacion")}
+				</h2>
+				<button
+					type="button"
+					aria-label="Siguiente"
+					data-sobre-arrow="next"
+					class="cursor-pointer text-white transition-opacity hover:opacity-70"
+				>
+					<svg
+						width="48"
+						height="48"
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M9 6L15 12L9 18"
+							stroke="white"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"></path>
+					</svg>
+				</button>
+			</div>
+
+			<div
+				role="tabpanel"
+				data-sobre-panel="about"
+				class="animate-fade-in"
+			>
+				<div
+					class="flex w-203 flex-col items-center justify-center gap-2.5 text-lg"
+				>
+					<div
+						class="flex items-center justify-center self-stretch p-5"
+					>
+						<div
+							class="relative flex-1 text-justify text-base-line-height leading-[120%]"
+						>
+							{t("sobreMi.parrafo")}
+						</div>
+					</div>
+					<div
+						class="flex items-center justify-center self-stretch p-5"
+					>
+						<div
+							class="relative flex-1 text-justify text-base-line-height leading-[120%]"
+						>
+							{t("sobreMi.cita")}
+						</div>
+					</div>
+					<a
+						href="#contacto"
+						class="flex items-center justify-center rounded-2xl border-[0.5px] border-solid border-white bg-transparent py-2.5 px-5 text-left text-base shadow-[0px_4px_4px_rgba(0,0,0,0.25)] transition-colors hover:bg-white/10"
+					>
+						<div class="relative leading-[120%]">
+							{t("sobreMi.cta")}
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div role="tabpanel" data-sobre-panel="educacion" class="hidden">
+				<div
+					class="flex w-203 flex-col items-center justify-center text-center text-xl"
+				>
+					<div
+						class="flex flex-col items-start justify-center gap-2.5"
+					>
+						{
+							education.map((ed) => (
+								<div class="flex flex-col items-start justify-center gap-1.25 self-stretch p-2.5">
+									<div class="relative font-medium leading-[120%]">
+										{ed.titulo}
+									</div>
+									<div class="relative text-base leading-[120%] text-slate">
+										{ed.institucion}
+									</div>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	const root = document.querySelector<HTMLElement>("[data-sobre-mi]");
+	if (root) {
+		const arrows =
+			root.querySelectorAll<HTMLButtonElement>("[data-sobre-arrow]");
+		const titles = root.querySelectorAll<HTMLElement>("[data-sobre-title]");
+		const panels = root.querySelectorAll<HTMLElement>("[data-sobre-panel]");
+
+		const apply = (index: number) => {
+			titles.forEach((title, i) => {
+				const isActive = i === index;
+				title.classList.toggle("hidden", !isActive);
+				if (isActive) {
+					title.classList.remove("animate-fade-in");
+					void title.offsetWidth;
+					title.classList.add("animate-fade-in");
+				}
+			});
+			panels.forEach((panel, i) => {
+				const isActive = i === index;
+				panel.classList.toggle("hidden", !isActive);
+				if (isActive) {
+					panel.classList.remove("animate-fade-in");
+					void panel.offsetWidth;
+					panel.classList.add("animate-fade-in");
+				}
+			});
+		};
+
+		let current = 0;
+		arrows.forEach((arrow) => {
+			arrow.addEventListener("click", () => {
+				current = current === 0 ? 1 : 0;
+				apply(current);
+			});
+		});
+	}
+</script>

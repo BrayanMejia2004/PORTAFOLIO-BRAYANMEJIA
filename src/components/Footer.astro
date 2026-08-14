@@ -1,0 +1,216 @@
+---
+import {
+	getTranslation,
+	type Language,
+	type TranslationKey,
+} from "../i18n/dictionaries";
+import iconoPerfil from "../assets/IconoPerfil.png";
+
+interface Props {
+	lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = (key: TranslationKey) => getTranslation(key, lang);
+
+const navItems = [
+	{ label: t("footer.inicio"), href: `/${lang}/#hero` },
+	{ label: t("footer.proyectos"), href: `/${lang}/#proyectos` },
+	{ label: t("footer.sobreMi"), href: `/${lang}/#sobreMi` },
+	{ label: t("footer.proceso"), href: `/${lang}/#proceso` },
+];
+
+const contactItems = [
+	{ label: t("footer.telefono"), href: "https://wa.me/573024550409" },
+	{ label: t("footer.email"), href: "mailto:brayanymortega@gmail.com" },
+	{ label: t("footer.ciudad"), href: null },
+];
+---
+
+<footer
+	class="relative mx-auto mt-50 flex w-full max-w-480 flex-col items-center justify-center text-left text-h2 text-electric"
+>
+	<div
+		class="flex h-115.25 w-full max-w-480 items-center justify-center gap-1 border-t-2 border-solid border-white py-20 px-0 box-border"
+	>
+		<div
+			class="flex flex-col items-start gap-5 self-stretch p-5 text-lg text-white"
+		>
+			<img
+				src={iconoPerfil.src}
+				alt="Brayan Mejia"
+				class="h-[128.4px] w-83.5 shrink-0 object-cover"
+			/>
+
+			<div
+				class="flex h-19.5 items-center justify-center py-0 px-5 box-border"
+			>
+				<div
+					class="relative w-109.75 shrink-0 font-light leading-[120%]"
+				>
+					{t("footer.tagline")}
+				</div>
+			</div>
+
+			<div
+				class="flex h-10 items-center gap-2.5 self-stretch py-0 px-5 box-border"
+			>
+				<a
+					href="https://www.linkedin.com/in/brayan-yesid-mejia-ortega/"
+					aria-label="LinkedIn"
+					class="relative h-10 w-10"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="40"
+						height="40"
+						viewBox="0 0 40 40"
+						fill="none"
+					>
+						<path
+							d="M31.6667 5C32.5507 5 33.3986 5.35119 34.0237 5.97631C34.6488 6.60143 35 7.44928 35 8.33333V31.6667C35 32.5507 34.6488 33.3986 34.0237 34.0237C33.3986 34.6488 32.5507 35 31.6667 35H8.33333C7.44928 35 6.60143 34.6488 5.97631 34.0237C5.35119 33.3986 5 32.5507 5 31.6667V8.33333C5 7.44928 5.35119 6.60143 5.97631 5.97631C6.60143 5.35119 7.44928 5 8.33333 5H31.6667ZM30.8333 30.8333V22C30.8333 20.559 30.2609 19.177 29.2419 18.1581C28.223 17.1391 26.841 16.5667 25.4 16.5667C23.9833 16.5667 22.3333 17.4333 21.5333 18.7333V16.8833H16.8833V30.8333H21.5333V22.6167C21.5333 21.3333 22.5667 20.2833 23.85 20.2833C24.4688 20.2833 25.0623 20.5292 25.4999 20.9668C25.9375 21.4043 26.1833 21.9978 26.1833 22.6167V30.8333H30.8333ZM11.4667 14.2667C12.2093 14.2667 12.9215 13.9717 13.4466 13.4466C13.9717 12.9215 14.2667 12.2093 14.2667 11.4667C14.2667 9.91667 13.0167 8.65 11.4667 8.65C10.7196 8.65 10.0032 8.94675 9.47498 9.47498C8.94675 10.0032 8.65 10.7196 8.65 11.4667C8.65 13.0167 9.91667 14.2667 11.4667 14.2667ZM13.7833 30.8333V16.8833H9.16667V30.8333H13.7833Z"
+							fill="white"></path>
+					</svg>
+				</a>
+				<a
+					href="https://www.instagram.com/brayanmejia_ux_ui/"
+					aria-label="Instagram"
+					class="relative h-10 w-10"
+				>
+					<svg
+						width="40"
+						height="40"
+						viewBox="0 0 40 40"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M26.6667 5C31.2667 5 35 8.73333 35 13.3333V26.6667C35 31.2667 31.2667 35 26.6667 35H13.3333C8.73333 35 5 31.2667 5 26.6667V13.3333C5 8.73333 8.73333 5 13.3333 5H20H26.6667Z"
+							stroke="white"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"></path>
+						<path
+							d="M20.0002 13.3333C23.6835 13.3333 26.6668 16.3166 26.6668 20C26.6668 23.6833 23.6835 26.6666 20.0002 26.6666C16.3168 26.6666 13.3335 23.6833 13.3335 20C13.3335 16.3166 16.3168 13.3333 20.0002 13.3333Z"
+							stroke="white"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"></path>
+						<path
+							d="M28.3335 14.1667C29.7142 14.1667 30.8335 13.0474 30.8335 11.6667C30.8335 10.286 29.7142 9.16669 28.3335 9.16669C26.9528 9.16669 25.8335 10.286 25.8335 11.6667C25.8335 13.0474 26.9528 14.1667 28.3335 14.1667Z"
+							fill="white"></path>
+					</svg>
+				</a>
+			</div>
+
+			<div
+				class="flex flex-col items-start py-0 px-5 text-center text-base"
+			>
+				<a
+					href="https://wa.me/573024550409"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="group flex h-12.5 w-49 items-center justify-center gap-2.5 rounded-xl bg-obsidian p-1.25 shadow-glow-primary"
+				>
+					<span
+						class="flex w-36.5 items-center justify-center gap-2.5 self-stretch rounded-xl bg-electric p-5 text-center font-sans text-base leading-[120%] font-medium text-white transition-all duration-300 group-hover:w-full"
+					>
+						{t("nav.contactame")}
+					</span>
+
+					<svg
+						width="30"
+						height="30"
+						viewBox="0 0 30 30"
+						fill="none"
+						class="aspect-square fill-white transition-opacity duration-300 group-hover:hidden"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M0 15C0 6.71573 6.71573 0 15 0C23.2843 0 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 0 23.2843 0 15Z"
+							fill="white"></path>
+						<path
+							d="M5 13.8005V16.1995H19.3939L12.7967 22.7967L14.5 24.5L24 15L14.5 5.5L12.7967 7.20328L19.3939 13.8005H5Z"
+							fill="black"></path>
+					</svg>
+				</a>
+			</div>
+		</div>
+
+		<div class="flex flex-col items-start self-stretch p-5">
+			<div
+				class="flex items-center justify-center self-stretch py-2.5 px-5"
+			>
+<b
+					class="relative text-lg font-bold underline underline-offset-4 leading-[120%]"
+				>
+					{t("footer.navegacion")}
+				</b>
+			</div>
+			<div
+				class="flex flex-col items-center justify-center gap-6 self-stretch p-2.5 text-center text-base text-white"
+			>
+				{
+					navItems.map((item) => (
+						<a
+							href={item.href}
+							class="text-center font-sans text-base leading-[120%] font-normal text-white transition-colors hover:text-electric hover:underline hover:decoration-electric hover:decoration-2 hover:underline-offset-8"
+						>
+							{item.label}
+						</a>
+					))
+				}
+			</div>
+		</div>
+
+		<div class="flex flex-col items-center self-stretch p-5">
+			<div
+				class="flex items-center justify-center self-stretch py-2.5 px-5"
+			>
+<b
+					class="relative text-lg font-bold underline underline-offset-4 leading-[120%]"
+				>
+					{t("footer.contacto")}
+				</b>
+			</div>
+			<div
+				class="flex flex-col items-center gap-6 p-2.5 text-center text-base text-white"
+			>
+				{
+					contactItems.map((item) =>
+						item.href ? (
+							<a
+								href={item.href}
+								target={
+									item.href.startsWith("http")
+										? "_blank"
+										: undefined
+								}
+								rel={
+									item.href.startsWith("http")
+										? "noopener noreferrer"
+										: undefined
+								}
+								class="text-center font-sans text-base leading-[120%] font-normal text-white transition-colors hover:text-electric hover:underline hover:decoration-electric hover:decoration-2 hover:underline-offset-8"
+							>
+								{item.label}
+							</a>
+						) : (
+							<div class="text-center font-sans text-base leading-[120%] font-normal text-white">
+								{item.label}
+							</div>
+						),
+					)
+				}
+			</div>
+		</div>
+	</div>
+
+	<div
+		class="flex h-30.75 w-full items-center justify-center bg-electric px-10 text-h3 text-white box-border"
+	>
+		<div class="relative font-medium leading-[120%]">
+			{t("footer.copyright")}
+		</div>
+	</div>
+</footer>

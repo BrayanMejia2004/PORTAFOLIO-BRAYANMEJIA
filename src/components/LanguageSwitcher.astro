@@ -1,0 +1,35 @@
+---
+import { getTranslation, languages, type Language } from '../i18n/dictionaries';
+
+interface Props {
+	lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = (key: Parameters<typeof getTranslation>[0]) => getTranslation(key, lang);
+const currentHash = Astro.url.hash;
+---
+
+<nav aria-label={t('nav.lang')} class="flex items-center gap-1">
+	{
+		(Object.keys(languages) as Language[]).map((l) => {
+			const href = `/${l}/${currentHash}`;
+			const isActive = l === lang;
+			return isActive ? (
+				<span
+					class="flex h-8 cursor-default items-center rounded-md bg-electric px-3 text-sm font-semibold text-white"
+					aria-current="true"
+				>
+					{languages[l]}
+				</span>
+			) : (
+				<a
+					href={href}
+					class="flex h-8 items-center rounded-md px-3 text-sm font-medium text-slate transition-colors hover:bg-white/10 hover:text-white"
+				>
+					{languages[l]}
+				</a>
+			);
+		})
+	}
+</nav>

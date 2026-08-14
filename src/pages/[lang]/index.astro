@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Hero from "../../components/Hero.astro";
+import Marquee from "../../components/Marquee.astro";
+import Proyectos from "../../components/Proyectos.astro";
+import SobreMi from "../../components/SobreMi.astro";
+import Proceso from "../../components/Proceso.astro";
+import Contacto from "../../components/Contacto.astro";
+import Footer from "../../components/Footer.astro";
+import fondo from "../../assets/Fondo1.png";
+import {
+	getTranslation,
+	languages,
+	type Language,
+} from "../../i18n/dictionaries";
+
+export function getStaticPaths() {
+	return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const langKey = (lang in languages ? lang : "es") as Language;
+const t = (key: Parameters<typeof getTranslation>[0]) =>
+	getTranslation(key, langKey);
+---
+
+<Layout
+	lang={langKey}
+	title={t("meta.title")}
+	description={t("meta.description")}
+>
+	<div class="relative">
+		<div
+			aria-hidden="true"
+			class="pointer-events-none absolute inset-x-0 top-0 z-0 h-270 w-full bg-cover bg-center"
+			style={`background-image: url(${fondo.src})`}
+		>
+		</div>
+
+		<div class="relative z-10 mx-10">
+			<Navbar lang={langKey} />
+			<main>
+				<Hero lang={langKey} />
+			</main>
+		</div>
+
+		<Marquee />
+		<Proyectos lang={langKey} />
+		<SobreMi lang={langKey} />
+		<Proceso lang={langKey} />
+		<Contacto lang={langKey} />
+		<Footer lang={langKey} />
+	</div>
+</Layout>
