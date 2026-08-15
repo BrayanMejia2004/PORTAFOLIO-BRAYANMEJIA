@@ -1,6 +1,6 @@
 ---
-import '@fontsource-variable/geist';
-import '../styles/global.css';
+import "@fontsource-variable/geist";
+import "../styles/global.css";
 
 interface Props {
 	lang?: string;
@@ -9,9 +9,9 @@ interface Props {
 }
 
 const {
-	lang = 'es',
-	title = 'Brayan Mejia — UX/UI Designer',
-	description = 'Diseño de experiencias digitales con precisión, claridad y empatía.',
+	lang = "es",
+	title = "Brayan Mejia — UX/UI Designer",
+	description = "Diseño de experiencias digitales con precisión, claridad y empatía.",
 } = Astro.props;
 ---
 
@@ -23,7 +23,6 @@ const {
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		<meta name="color-scheme" content="dark" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<title>{title}</title>
 	</head>
