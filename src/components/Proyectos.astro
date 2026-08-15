@@ -49,13 +49,15 @@ const projects = [1, 2, 3, 4].map((n, i) => {
 
 <section
 	id="proyectos"
-	class="relative isolate mx-auto flex h-270 w-full max-h-270 flex-col items-center justify-center gap-22.5 text-center text-hero-xl text-white"
+	class="relative isolate mx-auto top-20 flex h-270 w-full max-h-270 flex-col items-center justify-center gap-22.5 text-center text-hero-xl text-white max-[1600px]:h-[768px] max-[1600px]:max-h-[768px] max-[1600px]:gap-10 max-[1600px]:text-hero-lg"
 >
 	<div class="z-0 flex w-460 flex-col items-center justify-center gap-5">
 		<div class="relative self-stretch leading-[120%]">
 			{t("proyectos.titulo")}
 		</div>
-		<div class="relative self-stretch text-lg font-medium leading-[120%]">
+		<div
+			class="relative self-stretch text-lg font-medium leading-[120%] max-[1600px]:text-base"
+		>
 			{t("proyectos.subtitulo")}
 		</div>
 	</div>
@@ -67,32 +69,32 @@ const projects = [1, 2, 3, 4].map((n, i) => {
 		{
 			projects.map((project) => (
 				<div
-					class="flex h-158 w-125.25 shrink-0 items-center justify-center rounded-xl bg-cover bg-center"
+					class="flex h-158 w-125.25 shrink-0 items-center justify-center rounded-xl bg-cover bg-center max-[1600px]:h-[500px] max-[1600px]:w-[387px]"
 					style={`background-image: url(${fondoCard.src})`}
 				>
-					<div class="relative isolate flex w-125.25 flex-col items-center gap-2.5">
-						<div class="relative z-0 h-76.75 self-stretch rounded-t-lg rounded-b-none" />
+					<div class="relative isolate flex w-125.25 flex-col items-center gap-2.5 max-[1600px]:w-[385px]">
+						<div class="relative z-0 h-76.75 self-stretch rounded-t-lg rounded-b-none max-[1600px]:h-[223px]" />
 
 						<img
 							src={project.image.src}
 							alt={project.title}
-							class="absolute z-1 top-12.5 left-[calc(50%-134.5px)] h-62.5 w-67.5 rounded-t-xl rounded-b-none object-contain"
+							class="absolute z-1 top-12.5 left-[calc(50%-134.5px)] h-62.5 w-67.5 rounded-t-xl rounded-b-none object-contain max-[1600px]:top-[calc(50%-200px)] max-[1600px]:left-[calc(50%-89.5px)] max-[1600px]:h-[168px] max-[1600px]:w-[180px]"
 						/>
 
-						<div class="z-2 flex flex-col items-start gap-4 p-5">
-							<div class="flex h-11.75 w-72.75 items-center py-2.5 px-0 text-h1 box-border">
+						<div class="z-2 flex flex-col items-start gap-4 p-5 max-[1600px]:gap-2 max-[1600px]:p-3">
+							<div class="flex h-11.75 w-72.75 items-center py-2.5 px-0 text-h1 box-border max-[1600px]:h-[47px] max-[1600px]:w-[291px] max-[1600px]:text-[31px]">
 								<div class="relative shrink-0 leading-[120%]">
 									{project.title}
 								</div>
 							</div>
-							<div class="flex items-center justify-center py-2.5 px-0">
-								<div class="relative inline-block w-110.5 shrink-0 whitespace-pre-wrap leading-[120%]">
+							<div class="flex items-center justify-center py-2.5 px-0 max-[1600px]:py-2">
+								<div class="relative inline-block w-110.5 shrink-0 whitespace-pre-wrap leading-[120%] max-[1600px]:w-[300px] max-[1600px]:text-sm">
 									{project.description}
 								</div>
 							</div>
-							<div class="flex w-110.5 items-center justify-center gap-1.75">
+							<div class="flex w-110.5 items-center justify-center gap-1.75 max-[1600px]:w-auto max-[1600px]:gap-1">
 								{project.tags.map((tag) => (
-									<div class="flex items-center justify-center rounded-full bg-sky py-2.5 px-5">
+									<div class="flex items-center justify-center rounded-full bg-sky py-2.5 px-5 max-[1600px]:py-1.5 max-[1600px]:px-2.5 max-[1600px]:text-sm">
 										<div class="relative leading-[120%]">
 											{tag}
 										</div>
@@ -101,12 +103,12 @@ const projects = [1, 2, 3, 4].map((n, i) => {
 							</div>
 						</div>
 
-						<div class="z-3 flex items-center justify-center gap-2.5">
+						<div class="z-3 flex items-center justify-center gap-2.5 max-[1600px]:gap-2">
 							<a
 								href={project.link}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="flex items-center justify-center rounded-lg border-[0.5px] border-solid border-white bg-transparent py-2.5 px-5 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] transition-colors hover:bg-white/10"
+								class="flex items-center justify-center rounded-lg border-[0.5px] border-solid border-white bg-transparent py-2.5 px-5 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] transition-colors hover:bg-white/10 max-[1600px]:py-2 max-[1600px]:px-3 max-[1600px]:text-sm"
 							>
 								<div class="relative leading-[120%]">
 									{t("proyectos.verProyecto")}
@@ -116,7 +118,7 @@ const projects = [1, 2, 3, 4].map((n, i) => {
 								href={project.protoLink}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="flex items-center justify-center rounded-lg border-[0.5px] border-solid border-white bg-transparent py-2.5 px-5 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] transition-colors hover:bg-white/10"
+								class="flex items-center justify-center rounded-lg border-[0.5px] border-solid border-white bg-transparent py-2.5 px-5 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] transition-colors hover:bg-white/10 max-[1600px]:py-2 max-[1600px]:px-3 max-[1600px]:text-sm"
 							>
 								<div class="relative leading-[120%]">
 									{t("proyectos.prototipo")}
@@ -162,9 +164,6 @@ const projects = [1, 2, 3, 4].map((n, i) => {
 			scroller.scrollLeft = scrollLeft - walk;
 		});
 
-		scroller.addEventListener(
-			"dragstart",
-			(e) => e.preventDefault(),
-		);
+		scroller.addEventListener("dragstart", (e) => e.preventDefault());
 	}
 </script>
