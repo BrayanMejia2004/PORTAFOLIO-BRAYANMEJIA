@@ -23,6 +23,9 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# vercel output
+.vercel/
+
+# agent config files
 AGENTS.md
 CLAUDE.md
-.src\assets
