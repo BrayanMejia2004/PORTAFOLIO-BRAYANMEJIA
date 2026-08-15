@@ -82,7 +82,6 @@
 
 	body {
 		@apply bg-obsidian font-sans text-white antialiased;
-		overflow-x: hidden;
 	}
 
 	::selection {
