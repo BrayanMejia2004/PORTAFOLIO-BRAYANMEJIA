@@ -28,25 +28,25 @@ const contactItems = [
 ---
 
 <footer
-	class="relative mx-auto mt-50 flex w-full max-w-480 flex-col items-center justify-center text-left text-h2 text-electric"
+	class="relative mx-auto mt-50 flex w-full max-w-480 flex-col items-center justify-center text-left text-h2 text-electric max-[1600px]:top-20 max-[1600px]:mt-30"
 >
 	<div
-		class="flex h-115.25 w-full max-w-480 items-center justify-center gap-1 border-t-2 border-solid border-white py-20 px-0 box-border"
+		class="flex h-115.25 w-full max-w-480 items-center justify-center gap-1 border-t-2 border-solid border-white py-20 px-0 box-border max-[1600px]:py-10"
 	>
 		<div
-			class="flex flex-col items-start gap-5 self-stretch p-5 text-lg text-white"
+			class="flex flex-col items-start gap-5 self-stretch p-5 text-lg text-white max-[1600px]:gap-4 max-[1600px]:text-base"
 		>
 			<img
 				src={iconoPerfil.src}
 				alt="Brayan Mejia"
-				class="h-[128.4px] w-83.5 shrink-0 object-cover"
+				class="h-[128.4px] w-83.5 shrink-0 object-cover max-[1600px]:h-25 max-[1600px]:w-70"
 			/>
 
 			<div
 				class="flex h-19.5 items-center justify-center py-0 px-5 box-border"
 			>
 				<div
-					class="relative w-109.75 shrink-0 font-light leading-[120%]"
+					class="relative w-109.75 shrink-0 font-light leading-[120%] max-[1600px]:w-90"
 				>
 					{t("footer.tagline")}
 				</div>
@@ -141,7 +141,7 @@ const contactItems = [
 			<div
 				class="flex items-center justify-center self-stretch py-2.5 px-5"
 			>
-<b
+				<b
 					class="relative text-lg font-bold underline underline-offset-4 leading-[120%]"
 				>
 					{t("footer.navegacion")}
@@ -167,7 +167,7 @@ const contactItems = [
 			<div
 				class="flex items-center justify-center self-stretch py-2.5 px-5"
 			>
-<b
+				<b
 					class="relative text-lg font-bold underline underline-offset-4 leading-[120%]"
 				>
 					{t("footer.contacto")}
@@ -207,7 +207,7 @@ const contactItems = [
 	</div>
 
 	<div
-		class="flex h-30.75 w-full items-center justify-center bg-electric px-10 text-h3 text-white box-border"
+		class="flex h-30.75 w-full items-center justify-center bg-electric px-10 text-h3 text-white box-border max-[1600px]:h-20 max-[1600px]:px-5 max-[1600px]:text-lg"
 	>
 		<div class="relative font-medium leading-[120%]">
 			{t("footer.copyright")}
