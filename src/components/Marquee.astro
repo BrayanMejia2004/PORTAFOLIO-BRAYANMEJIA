@@ -10,34 +10,32 @@ const loop = [0, 1];
 ---
 
 <div
-	class="relative mt-62 z-10 flex w-full max-w-480 max-h-32.5 items-center justify-center gap-10 overflow-hidden bg-electric py-10 text-center text-h1 text-white"
+	class="relative mt-62 z-10 flex w-full items-center justify-center gap-10 overflow-hidden bg-electric py-10 text-center text-h1 text-white max-[1600px]:mt-25 max-[1600px]:h-2"
 >
 	<div class="flex w-max animate-marquee items-center">
 		{
 			loop.map(() => (
 				<div class="flex shrink-0 items-center gap-10 pr-10">
-					{
-						words.map((word) => (
-							<div class="flex shrink-0 items-center gap-10">
-								<svg
-									width="30"
-									height="30"
-									viewBox="0 0 50 50"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-									class="h-12.5 w-12.5 shrink-0"
-								>
-									<path
-										d="M17.125 17.1875L25 0L32.8125 17.1875L50 25L32.8125 32.875L25 50L17.125 32.875L0 25L17.125 17.1875Z"
-										fill="white"
-									/>
-								</svg>
-								<div class="relative whitespace-nowrap text-h3 leading-[120%]">
-									{word}
-								</div>
+					{words.map((word) => (
+						<div class="flex shrink-0 items-center gap-10">
+							<svg
+								width="30"
+								height="30"
+								viewBox="0 0 50 50"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-12.5 w-12.5 shrink-0 max-[1600px]:h-7 max-[1600px]:w-7"
+							>
+								<path
+									d="M17.125 17.1875L25 0L32.8125 17.1875L50 25L32.8125 32.875L25 50L17.125 32.875L0 25L17.125 17.1875Z"
+									fill="white"
+								/>
+							</svg>
+							<div class="relative whitespace-nowrap text-h3 leading-[120%] max-[1600px]:text-lg">
+								{word}
 							</div>
-						))
-					}
+						</div>
+					))}
 				</div>
 			))
 		}
