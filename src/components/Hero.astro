@@ -19,14 +19,16 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 	<div
 		class="z-0 flex h-83 shrink-0 flex-col items-center justify-center self-stretch py-2.5 px-0 box-border"
 	>
-		<div class="flex w-[1768px] items-center gap-10 py-2.5 px-0 box-border">
+		<div
+			class="flex w-[1768px] items-center gap-10 py-2.5 px-0 box-border max-[1600px]:w-full"
+		>
 			<div class="flex items-center py-0 px-2.5">
-				<div class="relative leading-[120%]">
+				<div class="relative leading-[120%] max-[1600px]:text-[31px]">
 					{t("hero.hola")}
 				</div>
 			</div>
 			<div
-				class="flex items-center justify-center rounded-[20px] border border-white/20 bg-white/10 px-10 py-2.5 text-base backdrop-blur-md shadow-[0_4px_24px_rgba(37,99,235,0.25)]"
+				class="flex items-center justify-center rounded-[20px] border border-white/20 bg-white/10 px-10 py-2.5 text-base backdrop-blur-md shadow-[0_4px_24px_rgba(37,99,235,0.25)] max-[1600px]:text-sm"
 			>
 				<div class="relative leading-[120%] transform-[rotate(0.1deg)]">
 					{t("hero.disponible")}
@@ -35,15 +37,15 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 		</div>
 
 		<div
-			class="relative isolate flex w-[1814px] flex-1 items-center gap-2.5 py-2.5 px-0 text-display box-border"
+			class="relative isolate flex w-[1814px] flex-1 items-center gap-2.5 py-2.5 px-0 text-display box-border max-[1600px]:w-full max-[1600px]:text-[170px]"
 		>
 			<div
-				class="absolute top-5 left-4 z-0 inline-block h-56.25 w-249.25 shrink-0 leading-[90%]"
+				class="absolute top-5 left-4 z-0 inline-block h-56.25 w-249.25 shrink-0 leading-[90%] max-[1600px]:top-0 max-[1600px]:left-2 max-[1600px]:h-38.25 max-[1600px]:w-168.75"
 			>
 				BRAYAN
 			</div>
 			<div
-				class="absolute top-27 left-247.25 z-1 inline-block h-56.25 w-195.25 shrink-0 leading-[90%]"
+				class="absolute top-27 left-247.25 z-1 inline-block h-56.25 w-195.25 shrink-0 leading-[90%] max-[1600px]:top-11 max-[1600px]:left-167.5 max-[1600px]:h-38.25 max-[1600px]:w-132.75"
 			>
 				MEJIA
 			</div>
@@ -51,20 +53,24 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 	</div>
 
 	<div
-		class="z-1 flex shrink-0 flex-col items-start justify-center self-stretch gap-5 py-2.5 px-11.25 text-[24px] box-border"
+		class="z-1 flex shrink-0 flex-col items-start justify-center self-stretch gap-5 py-2.5 px-11.25 text-[24px] box-border max-[1600px]:px-0 max-[1600px]:gap-2.5 max-[1600px]:text-lg max-[1600px]:-mt-25"
 	>
-		<div class="flex w-148.25 items-center p-2.5 box-border">
+		<div
+			class="flex w-148.25 items-center p-2.5 box-border max-[1600px]:w-full max-[1600px]:p-2.5"
+		>
 			<div
-				class="relative inline-block w-109.75 shrink-0 font-light leading-[120%]"
+				class="relative inline-block w-109.75 shrink-0 font-light leading-[120%] max-[1600px]:w-100 max-[1600px]:font-medium"
 			>
 				{t("hero.tagline")}
 			</div>
 		</div>
 
-		<div class="flex items-center gap-5.25 py-2.5 px-0 text-lg">
+		<div
+			class="flex items-center gap-5.25 py-2.5 px-0 text-lg max-[1600px]:gap-5.25 max-[1600px]:text-base"
+		>
 			<a
 				href={`/${lang}/#proyectos`}
-				class="flex w-54 items-center justify-center gap-2.5 rounded-2xl bg-electric py-2.5 pl-7.5 pr-5 box-border transition-colors hover:bg-sky"
+				class="flex w-54 items-center justify-center gap-2.5 rounded-2xl bg-electric py-2.5 pl-7.5 pr-5 box-border transition-colors hover:bg-sky max-[1600px]:w-auto max-[1600px]:py-2 max-[1600px]:pl-5 max-[1600px]:pr-5"
 			>
 				<svg
 					width="24"
@@ -72,7 +78,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 					viewBox="0 0 24 24"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
-					class="relative h-6 w-6"
+					class="relative h-6 w-6 max-[1600px]:h-5 max-[1600px]:w-5"
 				>
 					<path
 						d="M7 17V13L17 3L21 7L11 17H7Z"
@@ -100,7 +106,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 			<a
 				href={cv}
 				download="Hoja De Vida UXUI - Brayan Mejia.pdf"
-				class="flex items-center justify-center gap-2.5 rounded-2xl border-[0.5px] border-solid border-white bg-transparent py-2.5 pl-7.5 pr-5 transition-colors hover:bg-white/10"
+				class="flex items-center justify-center gap-2.5 rounded-2xl border-[0.5px] border-solid border-white bg-transparent py-2.5 pl-7.5 pr-5 transition-colors hover:bg-white/10 max-[1600px]:py-2 max-[1600px]:pl-5 max-[1600px]:pr-5"
 			>
 				<svg
 					width="24"
@@ -108,7 +114,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 					viewBox="0 0 24 24"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
-					class="relative h-6 w-6"
+					class="relative h-6 w-6 max-[1600px]:h-5 max-[1600px]:w-5"
 				>
 					<path
 						d="M13.5 3L19 8.5V20C19 20.55 18.55 21 18 21H6C5.45 21 5 20.55 5 20V4C5 3.45 5.45 3 6 3H13.5Z"
@@ -144,7 +150,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 	</div>
 
 	<div
-		class="z-2 flex shrink-0 items-center self-stretch gap-2.5 py-0 px-12.5"
+		class="z-2 flex shrink-0 items-center self-stretch gap-2.5 py-0 px-12.5 max-[1600px]:px-0"
 	>
 		<a
 			href="https://www.linkedin.com/in/brayan-yesid-mejia-ortega/"
@@ -195,10 +201,10 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 	</div>
 
 	<div
-		class="absolute z-3 top-[calc(50%+227.5px)] left-[calc(50%+381px)] grid shrink-0 grid-cols-[repeat(2,auto)] content-start gap-x-2.5 gap-y-4 pl-5 pr-5 text-base"
+		class="absolute z-3 top-[calc(50%+227.5px)] left-[calc(50%+381px)] grid shrink-0 grid-cols-[repeat(2,auto)] content-start gap-x-2.5 gap-y-2 pl-5 pr-5 text-base max-[1600px]:top-auto max-[1600px]:left-217.5 max-[1600px]:bottom-25 max-[1600px]:w-62.5 max-[1600px]:text-sm"
 	>
 		<div
-			class="absolute w-max top-px -left-7 col-start-1 row-start-1 flex items-center justify-center rounded-[20px] bg-electric px-10 py-2.5 shadow-[0px_4px_4px_rgba(148,163,184,0.25)]"
+			class="absolute w-max top-px -left-7 col-start-1 row-start-1 flex items-center justify-center rounded-[20px] bg-electric px-10 py-2.5 shadow-[0px_4px_4px_rgba(148,163,184,0.25)] max-[1600px]:-left-2.5"
 		>
 			<div
 				class="relative whitespace-nowrap font-medium leading-[120%] transform-[rotate(0.1deg)]"
@@ -207,7 +213,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 			</div>
 		</div>
 		<div
-			class="absolute w-max top-0 left-56.75 col-start-2 row-start-1 flex items-center justify-center rounded-[20px] bg-[#183f96] px-10 py-2.5"
+			class="absolute w-max top-0 left-56.75 col-start-2 row-start-1 flex items-center justify-center rounded-[20px] bg-[#183f96] px-10 py-2.5 max-[1600px]:left-22"
 		>
 			<div
 				class="relative whitespace-nowrap font-medium leading-[120%] transform-[rotate(0.1deg)]"
@@ -216,7 +222,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 			</div>
 		</div>
 		<div
-			class="absolute w-max top-15.25 left-6 col-start-1 row-start-2 flex items-center justify-center rounded-[20px] bg-[#183f96] px-10 py-2.5"
+			class="absolute w-max top-15.25 left-6 col-start-1 row-start-2 flex items-center justify-center rounded-[20px] bg-[#183f96] px-10 py-2.5 max-[1600px]:left-2.5"
 		>
 			<div
 				class="relative whitespace-nowrap font-medium leading-[120%] transform-[rotate(0.1deg)]"
@@ -225,7 +231,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 			</div>
 		</div>
 		<div
-			class="absolute w-max top-15 left-68 col-start-2 row-start-2 flex items-center justify-center rounded-[20px] bg-[#183f96] px-10 py-2.5"
+			class="absolute w-max top-15 left-68 col-start-2 row-start-2 flex items-center justify-center rounded-[20px] bg-[#183f96] px-10 py-2.5 max-[1600px]:left-25"
 		>
 			<div
 				class="relative whitespace-nowrap font-medium leading-[120%] transform-[rotate(0.1deg)]"
@@ -234,7 +240,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 			</div>
 		</div>
 		<div
-			class="absolute w-max top-30 -left-7 col-start-1 row-start-3 flex items-center justify-center rounded-[20px] bg-[#183f96] px-10 py-2.5"
+			class="absolute w-max top-30 -left-7 col-start-1 row-start-3 flex items-center justify-center rounded-[20px] bg-[#183f96] px-10 py-2.5 max-[1600px]:-left-2.5"
 		>
 			<div
 				class="relative whitespace-nowrap font-medium leading-[120%] transform-[rotate(0.1deg)]"
@@ -243,7 +249,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 			</div>
 		</div>
 		<div
-			class="absolute w-max top-30 left-33.5 col-start-2 row-start-3 flex items-center justify-center rounded-[20px] bg-electric px-10 py-2.5 shadow-[0px_4px_4px_rgba(148,163,184,0.25)]"
+			class="absolute w-max top-30 left-33.5 col-start-2 row-start-3 flex items-center justify-center rounded-[20px] bg-electric px-10 py-2.5 shadow-[0px_4px_4px_rgba(148,163,184,0.25)] max-[1600px]:left-12.5"
 		>
 			<div
 				class="relative whitespace-nowrap font-medium leading-[120%] transform-[rotate(0.1deg)]"
@@ -254,12 +260,12 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 	</div>
 
 	<div
-		class="absolute z-4 -bottom-66.75 left-[calc(50%-512px)] flex max-h-191.25 w-5xl max-w-5xl shrink-0 flex-col items-center justify-center p-2.5 box-border"
+		class="absolute z-4 -bottom-66.75 left-[calc(50%-512px)] flex max-h-191.25 w-5xl max-w-5xl shrink-0 flex-col items-center justify-center p-2.5 box-border max-[1600px]:top-5 max-[1600px]:bottom-auto max-[1600px]:left-[calc(50%-354px)] max-[1600px]:w-177 max-[1600px]:h-148 max-[1600px]:max-w-177 max-[1600px]:max-h-148"
 	>
 		<img
 			src={foto.src}
 			alt="Foto de Brayan Mejia"
-			class="relative h-186.25 max-w-full shrink-0 self-stretch overflow-hidden object-cover"
+			class="relative h-186.25 max-w-full shrink-0 self-stretch overflow-hidden object-cover max-[1600px]:w-171.75 max-[1600px]:h-[509.8px] max-[1600px]:self-auto"
 		/>
 	</div>
 </section>

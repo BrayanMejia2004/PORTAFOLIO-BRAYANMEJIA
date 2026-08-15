@@ -19,13 +19,16 @@ const links = [
 ---
 
 <header
-	class="flex items-center justify-between rounded-t-[20px] p-5"
-	style="width: 1840px; height: 150px; max-width: 1840px; max-height: 150px;"
+	class="flex w-full max-w-[1840px] h-37.5 max-h-37.5 items-center justify-between rounded-t-[20px] p-5 max-[1600px]:h-25 max-[1600px]:max-h-25 max-[1600px]:py-2.5"
 >
-	<img src={logo.src} alt="Brayan Mejia" class="h-25 w-auto" />
+	<img
+		src={logo.src}
+		alt="Brayan Mejia"
+		class="h-25 w-auto max-[1600px]:h-20"
+	/>
 
 	<nav
-		class="fixed top-12.5 left-1/2 z-50 flex -translate-x-1/2 items-center gap-7.5 rounded-[24px] border border-white/10 bg-black/0 px-8 py-4 backdrop-blur-md"
+		class="fixed top-12.5 left-1/2 z-50 flex -translate-x-1/2 items-center gap-7.5 rounded-[24px] border border-white/10 bg-black/0 px-8 py-4 backdrop-blur-md max-[1600px]:top-6.25 max-[1600px]:h-12.5 max-[1600px]:rounded-3xl max-[1600px]:justify-center max-[1600px]:gap-7.5 max-[1600px]:px-7.5 max-[1600px]:py-0"
 	>
 		{
 			links.map((link) => (
@@ -39,15 +42,15 @@ const links = [
 		}
 	</nav>
 
-	<div class="flex items-center gap-4">
+	<div class="flex items-center gap-4 max-[1600px]:gap-2.5">
 		<a
 			href="https://wa.me/573024550409"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="group flex h-12.5 w-49 items-center justify-center gap-2.5 rounded-xl bg-obsidian p-1.25 shadow-glow-primary"
+			class="group flex h-12.5 w-49 items-center justify-center gap-2.5 rounded-xl bg-obsidian p-1.25 shadow-glow-primary max-[1600px]:h-11.25 max-[1600px]:rounded-3xl max-[1600px]:p-1.25"
 		>
 			<span
-				class="flex w-36.5 items-center justify-center gap-2.5 self-stretch rounded-xl bg-electric p-5 text-center font-sans text-base leading-[120%] font-medium text-white transition-all duration-300 group-hover:w-full"
+				class="flex w-36.5 items-center justify-center gap-2.5 self-stretch rounded-xl bg-electric p-5 text-center font-sans text-base leading-[120%] font-medium text-white transition-all duration-300 group-hover:w-full max-[1600px]:rounded-3xl max-[1600px]:p-0"
 			>
 				{t("nav.contactame")}
 			</span>
