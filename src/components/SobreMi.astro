@@ -27,22 +27,24 @@ const education = [1, 2, 3, 4].map((n) => {
 <section
 	id="sobreMi"
 	data-sobre-mi
-	class="relative isolate flex h-270 w-full max-h-270 shrink-0 items-center overflow-hidden bg-cover bg-center text-center text-[300px] text-white box-border"
+	class="relative isolate flex h-270 w-full max-h-270 shrink-0 items-center overflow-hidden bg-cover bg-center text-center text-[300px] text-white box-border max-[1600px]:h-192 max-[1600px]:max-h-192"
 	style={`background-image: url(${fondo2.src})`}
 >
-	<div class="absolute top-47.5 h-200 w-200 shrink-0">
+	<div
+		class="absolute top-47.5 h-200 w-200 shrink-0 max-[1600px]:top-28.25 max-[1600px]:left-9 max-[1600px]:h-162.75 max-[1600px]:w-156.5"
+	>
 		<img
 			src={foto2.src}
 			alt="Foto de Brayan Mejia"
-			class="absolute top-11 left-20 object-cover"
+			class="absolute top-11 left-20 object-cover max-[1600px]:top-6 max-[1600px]:left-5 max-[1600px]:w-150 max-[1600px]:h-[631.9px]"
 		/>
 	</div>
 
 	<div
-		class="z-1 mx-auto flex w-full max-w-460 items-center justify-end gap-12.5 px-25 py-0"
+		class="z-1 mx-auto flex w-full max-w-460 items-center justify-end gap-12.5 px-25 py-0 max-[1600px]:px-25 max-[1600px]:gap-12.5"
 	>
 		<div
-			class="flex shrink-0 flex-col items-center justify-center gap-12.5 p-2.5 text-hero-xl"
+			class="flex shrink-0 flex-col items-center justify-center gap-12.5 p-2.5 text-hero-xl max-[1600px]:w-135.25 max-[1600px]:gap-12.5"
 		>
 			<div class="flex items-center justify-center gap-12.5">
 				<button
@@ -68,16 +70,18 @@ const education = [1, 2, 3, 4].map((n) => {
 				</button>
 				<h2
 					data-sobre-title="about"
-					class="animate-fade-in text-hero-md leading-[120%] underline underline-offset-8"
+					class="animate-fade-in text-hero-md leading-[120%] underline underline-offset-8 max-[1600px]:text-h1"
 				>
 					{t("sobreMi.titulo")}
 				</h2>
+
 				<h2
 					data-sobre-title="educacion"
-					class="hidden text-hero-md leading-[120%] underline underline-offset-8"
+					class="hidden text-hero-md leading-[120%] underline underline-offset-8 max-[1600px]:text-h1"
 				>
 					{t("sobreMi.educacion")}
 				</h2>
+
 				<button
 					type="button"
 					aria-label="Siguiente"
@@ -107,10 +111,10 @@ const education = [1, 2, 3, 4].map((n) => {
 				class="animate-fade-in"
 			>
 				<div
-					class="flex w-203 flex-col items-center justify-center gap-2.5 text-lg"
+					class="flex w-203 flex-col items-center justify-center gap-2.5 text-lg max-[1600px]:w-auto max-[1600px]:text-base"
 				>
 					<div
-						class="flex items-center justify-center self-stretch p-5"
+						class="flex items-center justify-center self-stretch p-5 max-[1600px]:p-2.5"
 					>
 						<div
 							class="relative flex-1 text-justify text-base-line-height leading-[120%]"
@@ -119,7 +123,7 @@ const education = [1, 2, 3, 4].map((n) => {
 						</div>
 					</div>
 					<div
-						class="flex items-center justify-center self-stretch p-5"
+						class="flex items-center justify-center self-stretch p-5 max-[1600px]:p-2.5"
 					>
 						<div
 							class="relative flex-1 text-justify text-base-line-height leading-[120%]"
@@ -140,7 +144,7 @@ const education = [1, 2, 3, 4].map((n) => {
 
 			<div role="tabpanel" data-sobre-panel="educacion" class="hidden">
 				<div
-					class="flex w-203 flex-col items-center justify-center text-center text-xl"
+					class="flex w-203 flex-col items-center justify-center text-center text-xl max-[1600px]:w-142.25 max-[1600px]:text-lg"
 				>
 					<div
 						class="flex flex-col items-start justify-center gap-2.5"
@@ -148,10 +152,10 @@ const education = [1, 2, 3, 4].map((n) => {
 						{
 							education.map((ed) => (
 								<div class="flex flex-col items-start justify-center gap-1.25 self-stretch p-2.5">
-									<div class="relative font-medium leading-[120%]">
+									<div class="relative font-medium leading-[120%] max-[1600px]:text-base">
 										{ed.titulo}
 									</div>
-									<div class="relative text-base leading-[120%] text-slate">
+									<div class="relative text-base leading-[120%] text-slate max-[1600px]:text-base">
 										{ed.institucion}
 									</div>
 								</div>

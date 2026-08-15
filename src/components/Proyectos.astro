@@ -49,7 +49,7 @@ const projects = [1, 2, 3, 4].map((n, i) => {
 
 <section
 	id="proyectos"
-	class="relative isolate mx-auto top-20 flex h-270 w-full max-h-270 flex-col items-center justify-center gap-22.5 text-center text-hero-xl text-white max-[1600px]:h-[768px] max-[1600px]:max-h-[768px] max-[1600px]:gap-10 max-[1600px]:text-hero-lg"
+	class="relative isolate mx-auto top-20 flex h-270 w-full max-h-270 flex-col items-center justify-center gap-22.5 text-center text-hero-xl text-white max-[1600px]:h-192 max-[1600px]:max-h-192 max-[1600px]:gap-10 max-[1600px]:text-hero-lg"
 >
 	<div class="z-0 flex w-460 flex-col items-center justify-center gap-5">
 		<div class="relative self-stretch leading-[120%]">
@@ -69,26 +69,26 @@ const projects = [1, 2, 3, 4].map((n, i) => {
 		{
 			projects.map((project) => (
 				<div
-					class="flex h-158 w-125.25 shrink-0 items-center justify-center rounded-xl bg-cover bg-center max-[1600px]:h-[500px] max-[1600px]:w-[387px]"
+					class="flex h-158 w-125.25 shrink-0 items-center justify-center rounded-xl bg-cover bg-center max-[1600px]:h-125 max-[1600px]:w-96.75"
 					style={`background-image: url(${fondoCard.src})`}
 				>
-					<div class="relative isolate flex w-125.25 flex-col items-center gap-2.5 max-[1600px]:w-[385px]">
-						<div class="relative z-0 h-76.75 self-stretch rounded-t-lg rounded-b-none max-[1600px]:h-[223px]" />
+					<div class="relative isolate flex w-125.25 flex-col items-center gap-2.5 max-[1600px]:w-96.25">
+						<div class="relative z-0 h-76.75 self-stretch rounded-t-lg rounded-b-none max-[1600px]:h-55.75" />
 
 						<img
 							src={project.image.src}
 							alt={project.title}
-							class="absolute z-1 top-12.5 left-[calc(50%-134.5px)] h-62.5 w-67.5 rounded-t-xl rounded-b-none object-contain max-[1600px]:top-[calc(50%-200px)] max-[1600px]:left-[calc(50%-89.5px)] max-[1600px]:h-[168px] max-[1600px]:w-[180px]"
+							class="absolute z-1 top-12.5 left-[calc(50%-134.5px)] h-62.5 w-67.5 rounded-t-xl rounded-b-none object-contain max-[1600px]:top-[calc(50%-200px)] max-[1600px]:left-[calc(50%-89.5px)] max-[1600px]:h-42 max-[1600px]:w-45"
 						/>
 
 						<div class="z-2 flex flex-col items-start gap-4 p-5 max-[1600px]:gap-2 max-[1600px]:p-3">
-							<div class="flex h-11.75 w-72.75 items-center py-2.5 px-0 text-h1 box-border max-[1600px]:h-[47px] max-[1600px]:w-[291px] max-[1600px]:text-[31px]">
+							<div class="flex h-11.75 w-72.75 items-center py-2.5 px-0 text-h1 box-border max-[1600px]:h-11.75 max-[1600px]:w-72.75 max-[1600px]:text-[31px]">
 								<div class="relative shrink-0 leading-[120%]">
 									{project.title}
 								</div>
 							</div>
 							<div class="flex items-center justify-center py-2.5 px-0 max-[1600px]:py-2">
-								<div class="relative inline-block w-110.5 shrink-0 whitespace-pre-wrap leading-[120%] max-[1600px]:w-[300px] max-[1600px]:text-sm">
+								<div class="relative inline-block w-110.5 shrink-0 whitespace-pre-wrap leading-[120%] max-[1600px]:w-75 max-[1600px]:text-sm">
 									{project.description}
 								</div>
 							</div>
