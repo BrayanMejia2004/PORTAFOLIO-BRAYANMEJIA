@@ -3,14 +3,15 @@ import { getTranslation, languages, type Language } from '../i18n/dictionaries';
 
 interface Props {
 	lang: Language;
+	class?: string;
 }
 
-const { lang } = Astro.props;
+const { lang, class: className = '' } = Astro.props;
 const t = (key: Parameters<typeof getTranslation>[0]) => getTranslation(key, lang);
 const currentHash = Astro.url.hash;
 ---
 
-<nav aria-label={t('nav.lang')} class="flex items-center gap-1">
+<nav aria-label={t('nav.lang')} class={`flex items-center gap-1 ${className}`}>
 	{
 		(Object.keys(languages) as Language[]).map((l) => {
 			const href = `/${l}/${currentHash}`;

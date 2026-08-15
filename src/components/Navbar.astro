@@ -1,7 +1,6 @@
 ---
 import { getTranslation, type Language } from "../i18n/dictionaries";
 import logo from "../assets/ICONOCIRCULO.png";
-import LanguageSwitcher from "./LanguageSwitcher.astro";
 
 interface Props {
 	lang: Language;
@@ -19,16 +18,16 @@ const links = [
 ---
 
 <header
-	class="flex w-full max-w-[1840px] h-37.5 max-h-37.5 items-center justify-between rounded-t-[20px] p-5 max-[1600px]:h-25 max-[1600px]:max-h-25 max-[1600px]:py-2.5"
+	class="flex w-full max-w-[1840px] h-37.5 max-h-37.5 items-center justify-between rounded-t-[20px] p-5 max-[1600px]:h-25 max-[1600px]:max-h-25 max-[1600px]:py-2.5 max-[768px]:h-16 max-[768px]:max-h-16 max-[768px]:py-2"
 >
 	<img
 		src={logo.src}
 		alt="Brayan Mejia"
-		class="h-25 w-auto max-[1600px]:h-20"
+		class="h-25 w-auto max-[1600px]:h-20 max-[768px]:h-20"
 	/>
 
 	<nav
-		class="fixed top-12.5 left-1/2 z-50 flex -translate-x-1/2 items-center gap-7.5 rounded-[24px] border border-white/10 bg-black/0 px-8 py-4 backdrop-blur-md max-[1600px]:top-6.25 max-[1600px]:h-12.5 max-[1600px]:rounded-3xl max-[1600px]:justify-center max-[1600px]:gap-7.5 max-[1600px]:px-7.5 max-[1600px]:py-0"
+		class="fixed top-12.5 left-1/2 z-50 flex -translate-x-1/2 items-center gap-7.5 rounded-[24px] border border-white/10 bg-black/0 px-8 py-4 backdrop-blur-md max-[1600px]:top-6.25 max-[1600px]:h-12.5 max-[1600px]:rounded-3xl max-[1600px]:justify-center max-[1600px]:gap-7.5 max-[1600px]:px-7.5 max-[1600px]:py-0 max-[768px]:hidden"
 	>
 		{
 			links.map((link) => (
@@ -47,10 +46,10 @@ const links = [
 			href="https://wa.me/573024550409"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="group flex h-12.5 w-49 items-center justify-center gap-2.5 rounded-xl bg-obsidian p-1.25 shadow-glow-primary max-[1600px]:h-11.25 max-[1600px]:rounded-3xl max-[1600px]:p-1.25"
+			class="group flex h-12.5 w-49 items-center justify-center gap-2.5 rounded-xl bg-obsidian p-1.25 shadow-glow-primary max-[1600px]:h-11.25 max-[1600px]:rounded-3xl max-[1600px]:p-1.25 max-[768px]:h-10 max-[768px]:w-auto"
 		>
 			<span
-				class="flex w-36.5 items-center justify-center gap-2.5 self-stretch rounded-xl bg-electric p-5 text-center font-sans text-base leading-[120%] font-medium text-white transition-all duration-300 group-hover:w-full max-[1600px]:rounded-3xl max-[1600px]:p-0"
+				class="flex w-36.5 items-center justify-center gap-2.5 self-stretch rounded-xl bg-electric p-5 text-center font-sans text-base leading-[120%] font-medium text-white transition-all duration-300 group-hover:w-full max-[1600px]:rounded-3xl max-[768px]:h-auto max-[768px]:w-auto max-[768px]:whitespace-nowrap max-[768px]:px-5 max-[768px]:py-0"
 			>
 				{t("nav.contactame")}
 			</span>
@@ -60,7 +59,7 @@ const links = [
 				height="30"
 				viewBox="0 0 30 30"
 				fill="none"
-				class="aspect-square fill-white transition-opacity duration-300 group-hover:hidden"
+				class="aspect-square fill-white transition-opacity duration-300 group-hover:hidden max-[768px]:hidden"
 				xmlns="http://www.w3.org/2000/svg"
 			>
 				<path
@@ -71,7 +70,5 @@ const links = [
 					fill="black"></path>
 			</svg>
 		</a>
-
-		<LanguageSwitcher lang={lang} />
 	</div>
 </header>
