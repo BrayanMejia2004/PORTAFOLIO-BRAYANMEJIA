@@ -16,7 +16,7 @@ const t = (key: TranslationKey) => getTranslation(key, lang);
 
 <section
 	id="contacto"
-	class="relative isolate flex h-270 w-full max-h-270 shrink-0 flex-col items-center justify-center gap-12.5 box-border bg-cover bg-center text-left text-hero-xl text-white"
+	class="relative isolate flex h-270 w-full max-h-270 shrink-0 flex-col items-center justify-center gap-12.5 box-border bg-cover bg-center text-left text-hero-xl text-white max-[1600px]:top-20 max-[1600px]:h-192 max-[1600px]:max-h-192 max-[1600px]:gap-6 max-[1600px]:text-hero-lg"
 	style={`background-image: url(${fondo.src})`}
 >
 	<div class="z-0 flex flex-col items-start self-stretch">
@@ -37,11 +37,9 @@ const t = (key: TranslationKey) => getTranslation(key, lang);
 	</div>
 
 	<form
-		class="z-1 grid shrink-0 grid-cols-[repeat(2,340px)] content-start gap-x-5 gap-y-2.5 p-5 text-base box-border"
+		class="z-1 grid shrink-0 grid-cols-[repeat(2,340px)] content-start gap-x-5 gap-y-2.5 p-5 text-base box-border max-[1600px]:grid-cols-[repeat(2,320px)] max-[1600px]:gap-y-2.5"
 	>
-		<div
-			class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-1 row-1"
-		>
+		<div class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-1 row-1">
 			<label class="flex items-center justify-center font-bold">
 				<span class="relative leading-[120%]">
 					{t("contacto.campoNombre")}
@@ -51,12 +49,10 @@ const t = (key: TranslationKey) => getTranslation(key, lang);
 				type="text"
 				required
 				placeholder={t("contacto.placeholderNombre")}
-				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none"
+				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none max-[1600px]:w-[280px] max-[1600px]:px-5"
 			/>
 		</div>
-		<div
-			class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-2 row-1"
-		>
+		<div class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-2 row-1">
 			<label class="flex items-center justify-center font-bold">
 				<span class="relative leading-[120%]">
 					{t("contacto.campoCorreo")}
@@ -66,12 +62,10 @@ const t = (key: TranslationKey) => getTranslation(key, lang);
 				type="email"
 				required
 				placeholder={t("contacto.placeholderCorreo")}
-				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none"
+				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none max-[1600px]:w-[280px] max-[1600px]:px-5"
 			/>
 		</div>
-		<div
-			class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-1 row-2"
-		>
+		<div class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-1 row-2">
 			<label class="flex items-center justify-center font-bold">
 				<span class="relative leading-[120%]">
 					{t("contacto.campoCelular")}
@@ -84,12 +78,10 @@ const t = (key: TranslationKey) => getTranslation(key, lang);
 				inputmode="numeric"
 				pattern="[0-9]*"
 				placeholder={t("contacto.placeholderCelular")}
-				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none"
+				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none max-[1600px]:w-[280px] max-[1600px]:px-5"
 			/>
 		</div>
-		<div
-			class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-2 row-2"
-		>
+		<div class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-2 row-2">
 			<label class="flex items-center justify-center font-bold">
 				<span class="relative leading-[120%]">
 					{t("contacto.campoCiudad")}
@@ -99,7 +91,7 @@ const t = (key: TranslationKey) => getTranslation(key, lang);
 				type="text"
 				required
 				placeholder={t("contacto.placeholderCiudad")}
-				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none"
+				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none max-[1600px]:w-[280px] max-[1600px]:px-5"
 			/>
 		</div>
 		<div
