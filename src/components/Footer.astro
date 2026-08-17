@@ -28,32 +28,32 @@ const contactItems = [
 ---
 
 <footer
-	class="relative mx-auto mt-50 flex w-full max-w-480 flex-col items-center justify-center text-left text-h2 text-electric max-[1600px]:top-20 max-[1600px]:mt-30"
+	class="relative mx-auto mt-50 flex w-full max-w-480 flex-col items-center justify-center text-left text-h2 text-electric max-[1600px]:top-20 max-[1600px]:mt-30 max-[768px]:mt-10"
 >
 	<div
-		class="flex h-115.25 w-full max-w-480 items-center justify-center gap-1 border-t-2 border-solid border-white py-20 px-0 box-border max-[1600px]:py-10"
+		class="flex h-115.25 w-full max-w-480 items-center justify-center gap-1 border-t-2 border-solid border-white py-20 px-0 box-border max-[1600px]:py-10 max-[768px]:flex-col max-[768px]:h-auto max-[768px]:items-center max-[768px]:py-10 max-[768px]:px-[25px]"
 	>
 		<div
-			class="flex flex-col items-start gap-5 self-stretch p-5 text-lg text-white max-[1600px]:gap-4 max-[1600px]:text-base"
+			class="flex flex-col items-start gap-5 self-stretch p-5 text-lg text-white max-[1600px]:gap-4 max-[1600px]:text-base max-[768px]:items-center max-[768px]:text-center max-[768px]:w-full"
 		>
 			<img
 				src={iconoPerfil.src}
 				alt="Brayan Mejia"
-				class="h-[128.4px] w-83.5 shrink-0 object-cover max-[1600px]:h-25 max-[1600px]:w-70"
+				class="h-[128.4px] w-83.5 shrink-0 object-cover max-[1600px]:h-25 max-[1600px]:w-70 max-[768px]:h-25 max-[768px]:w-70"
 			/>
 
 			<div
 				class="flex h-19.5 items-center justify-center py-0 px-5 box-border"
 			>
 				<div
-					class="relative w-109.75 shrink-0 font-light leading-[120%] max-[1600px]:w-90"
+					class="relative w-109.75 shrink-0 font-light leading-[120%] max-[1600px]:w-90 max-[768px]:w-full"
 				>
 					{t("footer.tagline")}
 				</div>
 			</div>
 
 			<div
-				class="flex h-10 items-center gap-2.5 self-stretch py-0 px-5 box-border"
+				class="flex h-10 items-center gap-2.5 self-stretch py-0 px-5 box-border max-[768px]:justify-center"
 			>
 				<a
 					href="https://www.linkedin.com/in/brayan-yesid-mejia-ortega/"
@@ -104,7 +104,7 @@ const contactItems = [
 			</div>
 
 			<div
-				class="flex flex-col items-start py-0 px-5 text-center text-base"
+				class="flex flex-col items-start py-0 px-5 text-center text-base max-[768px]:items-center"
 			>
 				<a
 					href="https://wa.me/573024550409"
@@ -137,7 +137,7 @@ const contactItems = [
 			</div>
 		</div>
 
-		<div class="flex flex-col items-start self-stretch p-5">
+		<div class="flex flex-col items-start self-stretch p-5 max-[768px]:items-center">
 			<div
 				class="flex items-center justify-center self-stretch py-2.5 px-5"
 			>
@@ -207,9 +207,9 @@ const contactItems = [
 	</div>
 
 	<div
-		class="flex h-30.75 w-full items-center justify-center bg-electric px-10 text-h3 text-white box-border max-[1600px]:h-20 max-[1600px]:px-5 max-[1600px]:text-lg"
+		class="flex h-30.75 w-full items-center justify-center bg-electric px-10 text-h3 text-white box-border max-[1600px]:h-20 max-[1600px]:px-5 max-[1600px]:text-lg max-[768px]:h-14 max-[768px]:px-[25px] max-[768px]:text-sm"
 	>
-		<div class="relative font-medium leading-[120%]">
+		<div class="relative font-normal leading-[120%] max-[768px]:text-center">
 			{t("footer.copyright")}
 		</div>
 	</div>

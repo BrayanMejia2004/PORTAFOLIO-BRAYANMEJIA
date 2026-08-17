@@ -16,30 +16,30 @@ const t = (key: TranslationKey) => getTranslation(key, lang);
 
 <section
 	id="contacto"
-	class="relative isolate flex h-270 w-full max-h-270 shrink-0 flex-col items-center justify-center gap-12.5 box-border bg-cover bg-center text-left text-hero-xl text-white max-[1600px]:top-20 max-[1600px]:h-192 max-[1600px]:max-h-192 max-[1600px]:gap-6 max-[1600px]:text-hero-lg"
+	class="relative isolate flex h-270 w-full max-h-270 shrink-0 flex-col items-center justify-center gap-12.5 box-border bg-cover bg-center text-left text-hero-xl text-white max-[1600px]:top-20 max-[1600px]:h-192 max-[1600px]:max-h-192 max-[1600px]:gap-6 max-[1600px]:text-hero-lg max-[768px]:h-auto max-[768px]:max-h-none max-[768px]:px-[25px] max-[768px]:gap-6"
 	style={`background-image: url(${fondo.src})`}
 >
 	<div class="z-0 flex flex-col items-start self-stretch">
 		<div
 			class="flex h-27.75 items-center justify-center self-stretch p-2.5 box-border"
 		>
-			<div class="relative leading-[120%]">
+			<div class="relative leading-[120%] max-[768px]:text-[30px]">
 				{t("contacto.titulo")}
 			</div>
 		</div>
 		<div
-			class="relative -mt-2.5 flex h-9.75 items-center justify-center self-stretch p-2.5 box-border text-base"
+			class="relative -mt-2.5 flex h-9.75 items-center justify-center self-stretch p-2.5 box-border text-base max-[768px]:justify-center"
 		>
-			<div class="relative leading-[120%]">
+			<div class="relative leading-[120%] max-[768px]:text-center max-[768px]:font-normal">
 				{t("contacto.subtitulo")}
 			</div>
 		</div>
 	</div>
 
 	<form
-		class="z-1 grid shrink-0 grid-cols-[repeat(2,340px)] content-start gap-x-5 gap-y-2.5 p-5 text-base box-border max-[1600px]:grid-cols-[repeat(2,320px)] max-[1600px]:gap-y-2.5"
+		class="z-1 grid shrink-0 grid-cols-[repeat(2,340px)] content-start gap-x-5 gap-y-2.5 p-5 text-base box-border max-[1600px]:grid-cols-[repeat(2,320px)] max-[1600px]:gap-y-2.5 max-[768px]:grid-cols-1 max-[768px]:w-full max-[768px]:shrink max-[768px]:min-w-0 max-[768px]:px-0"
 	>
-		<div class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-1 row-1">
+		<div class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-1 row-1 max-[768px]:col-auto max-[768px]:row-auto max-[768px]:w-full max-[768px]:px-0">
 			<label class="flex items-center justify-center font-bold">
 				<span class="relative leading-[120%]">
 					{t("contacto.campoNombre")}
@@ -49,10 +49,10 @@ const t = (key: TranslationKey) => getTranslation(key, lang);
 				type="text"
 				required
 				placeholder={t("contacto.placeholderNombre")}
-				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none max-[1600px]:w-70 max-[1600px]:px-5"
+				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none max-[1600px]:w-70 max-[1600px]:px-5 max-[768px]:w-full"
 			/>
 		</div>
-		<div class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-2 row-1">
+		<div class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-2 row-1 max-[768px]:col-auto max-[768px]:row-auto max-[768px]:w-full max-[768px]:px-0">
 			<label class="flex items-center justify-center font-bold">
 				<span class="relative leading-[120%]">
 					{t("contacto.campoCorreo")}
@@ -62,10 +62,10 @@ const t = (key: TranslationKey) => getTranslation(key, lang);
 				type="email"
 				required
 				placeholder={t("contacto.placeholderCorreo")}
-				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none max-[1600px]:w-70 max-[1600px]:px-5"
+				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none max-[1600px]:w-70 max-[1600px]:px-5 max-[768px]:w-full"
 			/>
 		</div>
-		<div class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-1 row-2">
+		<div class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-1 row-2 max-[768px]:col-auto max-[768px]:row-auto max-[768px]:w-full max-[768px]:px-0">
 			<label class="flex items-center justify-center font-bold">
 				<span class="relative leading-[120%]">
 					{t("contacto.campoCelular")}
@@ -78,10 +78,10 @@ const t = (key: TranslationKey) => getTranslation(key, lang);
 				inputmode="numeric"
 				pattern="[0-9]*"
 				placeholder={t("contacto.placeholderCelular")}
-				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none max-[1600px]:w-70 max-[1600px]:px-5"
+				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none max-[1600px]:w-70 max-[1600px]:px-5 max-[768px]:w-full"
 			/>
 		</div>
-		<div class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-2 row-2">
+		<div class="flex flex-col items-start gap-2.5 px-5 py-2.5 col-2 row-2 max-[768px]:col-auto max-[768px]:row-auto max-[768px]:w-full max-[768px]:px-0">
 			<label class="flex items-center justify-center font-bold">
 				<span class="relative leading-[120%]">
 					{t("contacto.campoCiudad")}
@@ -91,11 +91,11 @@ const t = (key: TranslationKey) => getTranslation(key, lang);
 				type="text"
 				required
 				placeholder={t("contacto.placeholderCiudad")}
-				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none max-[1600px]:w-70 max-[1600px]:px-5"
+				class="h-11.25 w-75 max-h-11.25 box-border flex items-center justify-center rounded-md border border-solid border-white bg-transparent px-7.5 py-2.5 text-base text-white placeholder:text-white/50 outline-none max-[1600px]:w-70 max-[1600px]:px-5 max-[768px]:w-full"
 			/>
 		</div>
 		<div
-			class="flex h-39.75 flex-col items-start gap-2.5 px-5 py-2.5 col-[1/span_2] row-[3/span_2]"
+			class="flex h-39.75 flex-col items-start gap-2.5 px-5 py-2.5 col-[1/span_2] row-[3/span_2] max-[768px]:col-span-1 max-[768px]:row-auto max-[768px]:w-full max-[768px]:px-0"
 		>
 			<label class="flex items-center justify-center font-bold">
 				<span class="relative leading-[120%]">
@@ -109,7 +109,7 @@ const t = (key: TranslationKey) => getTranslation(key, lang);
 			></textarea>
 		</div>
 		<div
-			class="flex w-max flex-col items-start px-5 py-2.5 box-border col-1 row-5"
+			class="flex w-max flex-col items-start px-5 py-2.5 box-border col-1 row-5 max-[768px]:col-auto max-[768px]:row-auto max-[768px]:px-0 max-[768px]:w-full max-[768px]:items-center"
 		>
 			<button
 				type="submit"
