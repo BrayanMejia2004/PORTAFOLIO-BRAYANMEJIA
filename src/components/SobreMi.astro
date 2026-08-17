@@ -27,26 +27,26 @@ const education = [1, 2, 3, 4].map((n) => {
 <section
 	id="sobreMi"
 	data-sobre-mi
-	class="relative isolate flex h-270 w-full max-h-270 shrink-0 items-center overflow-hidden bg-cover bg-center text-center text-[300px] text-white box-border max-[1600px]:h-192 max-[1600px]:max-h-192 max-[1600px]:top-20"
+	class="relative isolate flex h-270 w-full max-h-270 shrink-0 items-center overflow-hidden bg-cover bg-center text-center text-[300px] text-white box-border max-[1600px]:h-192 max-[1600px]:max-h-192 max-[1600px]:top-20 max-[768px]:h-auto max-[768px]:max-h-none max-[768px]:flex-col max-[768px]:items-center max-[768px]:px-[25px] max-[768px]:py-10"
 	style={`background-image: url(${fondo2.src})`}
 >
 	<div
-		class="absolute top-47.5 h-200 w-200 shrink-0 max-[1600px]:top-28.25 max-[1600px]:left-9 max-[1600px]:h-162.75 max-[1600px]:w-156.5"
+		class="absolute top-47.5 h-200 w-200 shrink-0 max-[1600px]:top-28.25 max-[1600px]:left-9 max-[1600px]:h-162.75 max-[1600px]:w-156.5 max-[768px]:static max-[768px]:top-auto max-[768px]:left-auto max-[768px]:flex max-[768px]:w-full max-[768px]:h-auto max-[768px]:justify-center"
 	>
 		<img
 			src={foto2.src}
 			alt="Foto de Brayan Mejia"
-			class="absolute top-11 left-20 object-cover max-[1600px]:top-6 max-[1600px]:left-5 max-[1600px]:w-150 max-[1600px]:h-[631.9px]"
+			class="absolute top-11 left-20 object-cover max-[1600px]:top-6 max-[1600px]:left-5 max-[1600px]:w-150 max-[1600px]:h-[631.9px] max-[768px]:static max-[768px]:top-0 max-[768px]:left-0 max-[768px]:w-[220px] max-[768px]:h-auto max-[768px]:object-contain"
 		/>
 	</div>
 
 	<div
-		class="z-1 mx-auto flex w-full max-w-460 items-center justify-end gap-12.5 px-25 py-0 max-[1600px]:px-25 max-[1600px]:gap-12.5"
+		class="z-1 mx-auto flex w-full max-w-460 items-center justify-end gap-12.5 px-25 py-0 max-[1600px]:px-25 max-[1600px]:gap-12.5 max-[768px]:justify-center max-[768px]:px-0"
 	>
 		<div
-			class="flex shrink-0 flex-col items-center justify-center gap-12.5 p-2.5 text-hero-xl max-[1600px]:w-135.25 max-[1600px]:gap-12.5"
+			class="flex shrink-0 flex-col items-center justify-center gap-12.5 p-2.5 text-hero-xl max-[1600px]:w-135.25 max-[1600px]:gap-12.5 max-[768px]:w-full max-[768px]:gap-8"
 		>
-			<div class="flex items-center justify-center gap-12.5">
+			<div class="flex items-center justify-center gap-12.5 max-[768px]:gap-3">
 				<button
 					type="button"
 					aria-label="Anterior"
@@ -59,6 +59,7 @@ const education = [1, 2, 3, 4].map((n) => {
 						viewBox="0 0 24 24"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
+						class="max-[768px]:h-8 max-[768px]:w-8"
 					>
 						<path
 							d="M15 18L9 12L15 6"
@@ -70,14 +71,14 @@ const education = [1, 2, 3, 4].map((n) => {
 				</button>
 				<h2
 					data-sobre-title="about"
-					class="animate-fade-in text-hero-md leading-[120%] underline underline-offset-8 max-[1600px]:text-h1"
+					class="animate-fade-in text-hero-md leading-[120%] underline underline-offset-8 max-[1600px]:text-h1 max-[768px]:text-[31px]"
 				>
 					{t("sobreMi.titulo")}
 				</h2>
 
 				<h2
 					data-sobre-title="educacion"
-					class="hidden text-hero-md leading-[120%] underline underline-offset-8 max-[1600px]:text-h1"
+					class="hidden text-hero-md leading-[120%] underline underline-offset-8 max-[1600px]:text-h1 max-[768px]:text-[31px]"
 				>
 					{t("sobreMi.educacion")}
 				</h2>
@@ -94,6 +95,7 @@ const education = [1, 2, 3, 4].map((n) => {
 						viewBox="0 0 24 24"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
+						class="max-[768px]:h-8 max-[768px]:w-8"
 					>
 						<path
 							d="M9 6L15 12L9 18"
@@ -111,7 +113,7 @@ const education = [1, 2, 3, 4].map((n) => {
 				class="animate-fade-in"
 			>
 				<div
-					class="flex w-203 flex-col items-center justify-center gap-2.5 text-lg max-[1600px]:w-auto max-[1600px]:text-base"
+					class="flex w-203 flex-col items-center justify-center gap-2.5 text-lg max-[1600px]:w-auto max-[1600px]:text-base max-[768px]:w-full max-[768px]:text-sm"
 				>
 					<div
 						class="flex items-center justify-center self-stretch p-5 max-[1600px]:p-2.5"
@@ -144,7 +146,7 @@ const education = [1, 2, 3, 4].map((n) => {
 
 			<div role="tabpanel" data-sobre-panel="educacion" class="hidden">
 				<div
-					class="flex w-203 flex-col items-center justify-center text-center text-xl max-[1600px]:w-142.25 max-[1600px]:text-lg"
+					class="flex w-203 flex-col items-center justify-center text-center text-xl max-[1600px]:w-142.25 max-[1600px]:text-lg max-[768px]:w-full max-[768px]:items-start max-[768px]:text-left"
 				>
 					<div
 						class="flex flex-col items-start justify-center gap-2.5"
@@ -152,10 +154,10 @@ const education = [1, 2, 3, 4].map((n) => {
 						{
 							education.map((ed) => (
 								<div class="flex flex-col items-start justify-center gap-1.25 self-stretch p-2.5">
-									<div class="relative font-medium leading-[120%] max-[1600px]:text-base">
+									<div class="relative font-medium leading-[120%] max-[1600px]:text-base max-[768px]:text-sm">
 										{ed.titulo}
 									</div>
-									<div class="relative text-base leading-[120%] text-slate max-[1600px]:text-base">
+									<div class="relative text-base leading-[120%] text-slate max-[1600px]:text-base max-[768px]:text-sm">
 										{ed.institucion}
 									</div>
 								</div>

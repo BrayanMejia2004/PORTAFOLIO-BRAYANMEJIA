@@ -14,7 +14,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 
 <section
 	id="hero"
-	class="relative isolate flex w-full max-w-[1840px] max-h-143.75 flex-col items-start justify-center gap-2.5 text-left text-h1 text-white max-[768px]:top-5"
+	class="relative isolate flex w-full max-w-[1840px] max-h-143.75 flex-col items-start justify-center gap-2.5 text-left text-h1 text-white max-[768px]:items-center max-[768px]:text-center max-[768px]:px-[25px]"
 >
 	<div
 		class="z-0 flex h-83 shrink-0 flex-col items-center justify-center self-stretch py-2.5 px-0 box-border max-[768px]:h-auto"
@@ -24,13 +24,13 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 		>
 			<div class="flex items-center py-0 px-2.5">
 				<div
-					class="relative leading-[120%] max-[1600px]:text-h2 max-[1024px]:text-lg"
+					class="relative leading-[120%] max-[1600px]:text-h2 max-[1024px]:text-lg max-[768px]:text-lg"
 				>
 					{t("hero.hola")}
 				</div>
 			</div>
 			<div
-				class="flex items-center justify-center rounded-[20px] border border-white/20 bg-white/10 px-10 py-2.5 text-base backdrop-blur-md shadow-[0_4px_24px_rgba(37,99,235,0.25)] max-[1600px]:text-sm"
+				class="flex items-center justify-center rounded-[20px] border border-white/20 bg-white/10 px-10 py-2.5 text-base backdrop-blur-md shadow-[0_4px_24px_rgba(37,99,235,0.25)] max-[1600px]:text-sm max-[768px]:px-[30px] max-[768px]:py-[10px] max-[768px]:text-xs"
 			>
 				<div class="relative leading-[120%] transform-[rotate(0.1deg)]">
 					{t("hero.disponible")}
@@ -39,7 +39,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 		</div>
 
 		<div
-			class="relative isolate flex w-[1814px] flex-1 items-center gap-2.5 py-2.5 px-0 text-display box-border max-[1600px]:w-full max-[1600px]:text-[170px] max-[768px]:flex-col max-[768px]:items-center max-[768px]:justify-center max-[768px]:text-[80px]"
+			class="relative isolate flex w-[1814px] flex-1 items-center gap-2.5 py-2.5 px-0 text-display box-border max-[1600px]:w-full max-[1600px]:text-[170px] max-[768px]:flex-col max-[768px]:items-center max-[768px]:justify-center max-[768px]:text-[76px] max-[768px]:mt-8"
 		>
 			<div
 				class="absolute top-5 left-4 z-0 inline-block h-56.25 w-249.25 shrink-0 leading-[90%] max-[1600px]:top-0 max-[1600px]:left-2 max-[1600px]:h-38.25 max-[1600px]:w-168.75 max-[768px]:static max-[768px]:top-0 max-[768px]:left-auto max-[768px]:h-auto max-[768px]:w-auto"
@@ -55,24 +55,24 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 	</div>
 
 	<div
-		class="z-1 flex shrink-0 flex-col items-start justify-center self-stretch gap-5 py-2.5 px-11.25 text-[24px] box-border max-[1600px]:px-0 max-[1600px]:gap-2.5 max-[1600px]:text-lg max-[1600px]:-mt-25 max-[768px]:items-center max-[768px]:-mt-20"
+		class="z-1 flex shrink-0 flex-col items-start justify-center self-stretch gap-5 py-2.5 px-11.25 text-[24px] box-border max-[1600px]:px-0 max-[1600px]:gap-2.5 max-[1600px]:text-lg max-[1600px]:-mt-25 max-[768px]:items-center max-[768px]:mt-0"
 	>
 		<div
 			class="flex w-148.25 items-center p-2.5 box-border max-[1600px]:w-full max-[1600px]:p-2.5 max-[768px]:justify-center max-[768px]:top-12.5"
 		>
 			<div
-				class="relative inline-block w-109.75 shrink-0 font-light leading-[120%] max-[1600px]:w-100 max-[1600px]:font-medium max-[768px]:text-center max-[768px]:text-base max-[768px]:font-normal"
+				class="relative inline-block w-109.75 shrink-0 font-light leading-[120%] max-[1600px]:w-100 max-[1600px]:font-medium max-[768px]:text-center max-[768px]:text-sm max-[768px]:font-normal max-[768px]:w-[286px]"
 			>
 				{t("hero.tagline")}
 			</div>
 		</div>
 
 		<div
-			class="flex items-center gap-5.25 py-2.5 px-0 text-lg max-[1600px]:gap-5.25 max-[1600px]:text-base max-[768px]:justify-center"
+			class="flex items-center gap-5.25 py-2.5 px-0 text-lg max-[1600px]:gap-5.25 max-[1600px]:text-base max-[768px]:justify-center max-[768px]:gap-[10px] max-[768px]:w-full"
 		>
 			<a
 				href={`/${lang}/#proyectos`}
-				class="flex w-54 items-center justify-center gap-2.5 rounded-2xl bg-electric py-2.5 pl-7.5 pr-5 box-border transition-colors hover:bg-sky max-[1600px]:w-auto max-[1600px]:py-2 max-[1600px]:pl-5 max-[1600px]:pr-5"
+				class="flex w-54 items-center justify-center gap-2.5 rounded-2xl bg-electric py-2.5 pl-7.5 pr-5 box-border transition-colors hover:bg-sky max-[1600px]:w-auto max-[1600px]:py-2 max-[1600px]:pl-5 max-[1600px]:pr-5 max-[768px]:w-[150px] max-[768px]:h-10 max-[768px]:py-0 max-[768px]:pl-0 max-[768px]:pr-0 max-[768px]:gap-1.5 max-[768px]:text-[13px]"
 			>
 				<svg
 					width="24"
@@ -108,7 +108,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 			<a
 				href={cv}
 				download="Hoja De Vida UXUI - Brayan Mejia.pdf"
-				class="flex items-center justify-center gap-2.5 rounded-2xl border-[0.5px] border-solid border-white bg-transparent py-2.5 pl-7.5 pr-5 transition-colors hover:bg-white/10 max-[1600px]:py-2 max-[1600px]:pl-5 max-[1600px]:pr-5"
+				class="flex items-center justify-center gap-2.5 rounded-2xl border-[0.5px] border-solid border-white bg-transparent py-2.5 pl-7.5 pr-5 transition-colors hover:bg-white/10 max-[1600px]:py-2 max-[1600px]:pl-5 max-[1600px]:pr-5 max-[768px]:w-[150px] max-[768px]:h-10 max-[768px]:py-0 max-[768px]:pl-0 max-[768px]:pr-0 max-[768px]:gap-1.5 max-[768px]:text-[13px]"
 			>
 				<svg
 					width="24"
@@ -152,12 +152,12 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 	</div>
 
 	<div
-		class="z-2 flex shrink-0 items-center self-stretch gap-2.5 py-0 px-12.5 max-[1600px]:px-0 max-[768px]:justify-center"
+		class="z-2 flex shrink-0 items-center self-stretch gap-2.5 py-0 px-12.5 max-[1600px]:px-0 max-[768px]:justify-center max-[768px]:gap-[10px]"
 	>
 		<a
 			href="https://www.linkedin.com/in/brayan-yesid-mejia-ortega/"
 			aria-label="LinkedIn"
-			class="relative h-10 w-10"
+			class="relative h-10 w-10 max-[768px]:h-[30px] max-[768px]:w-[30px]"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -165,6 +165,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 				height="40"
 				viewBox="0 0 40 40"
 				fill="none"
+				class="max-[768px]:h-[30px] max-[768px]:w-[30px]"
 			>
 				<path
 					d="M31.6667 5C32.5507 5 33.3986 5.35119 34.0237 5.97631C34.6488 6.60143 35 7.44928 35 8.33333V31.6667C35 32.5507 34.6488 33.3986 34.0237 34.0237C33.3986 34.6488 32.5507 35 31.6667 35H8.33333C7.44928 35 6.60143 34.6488 5.97631 34.0237C5.35119 33.3986 5 32.5507 5 31.6667V8.33333C5 7.44928 5.35119 6.60143 5.97631 5.97631C6.60143 5.35119 7.44928 5 8.33333 5H31.6667ZM30.8333 30.8333V22C30.8333 20.559 30.2609 19.177 29.2419 18.1581C28.223 17.1391 26.841 16.5667 25.4 16.5667C23.9833 16.5667 22.3333 17.4333 21.5333 18.7333V16.8833H16.8833V30.8333H21.5333V22.6167C21.5333 21.3333 22.5667 20.2833 23.85 20.2833C24.4688 20.2833 25.0623 20.5292 25.4999 20.9668C25.9375 21.4043 26.1833 21.9978 26.1833 22.6167V30.8333H30.8333ZM11.4667 14.2667C12.2093 14.2667 12.9215 13.9717 13.4466 13.4466C13.9717 12.9215 14.2667 12.2093 14.2667 11.4667C14.2667 9.91667 13.0167 8.65 11.4667 8.65C10.7196 8.65 10.0032 8.94675 9.47498 9.47498C8.94675 10.0032 8.65 10.7196 8.65 11.4667C8.65 13.0167 9.91667 14.2667 11.4667 14.2667ZM13.7833 30.8333V16.8833H9.16667V30.8333H13.7833Z"
@@ -174,7 +175,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 		<a
 			href="https://www.instagram.com/brayanmejia_ux_ui/"
 			aria-label="Instagram"
-			class="relative h-10 w-10"
+			class="relative h-10 w-10 max-[768px]:h-[30px] max-[768px]:w-[30px]"
 		>
 			<svg
 				width="40"
@@ -182,6 +183,7 @@ const t = (key: Parameters<typeof getTranslation>[0]) =>
 				viewBox="0 0 40 40"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
+				class="max-[768px]:h-[30px] max-[768px]:w-[30px]"
 			>
 				<path
 					d="M26.6667 5C31.2667 5 35 8.73333 35 13.3333V26.6667C35 31.2667 31.2667 35 26.6667 35H13.3333C8.73333 35 5 31.2667 5 26.6667V13.3333C5 8.73333 8.73333 5 13.3333 5H20H26.6667Z"
